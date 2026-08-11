@@ -1,7 +1,22 @@
 ---
 ---
 
-@use 'main';
+{%- comment -%}
+  테마 원본(assets/css/jekyll-theme-chirpy.scss)의 진입부를 그대로 유지한다.
+  production 빌드에서는 반드시 `main.bundle` 이어야 한다 — Bootstrap 이 그 안에 있다.
+  `main` 만 쓰면 사이드바 드롭다운·목록 스타일이 통째로 깨진다.
+{%- endcomment -%}
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
 /* ══════════════════════════════════════════════════════════════
    1. 타이포그래피 — 한글 웹폰트 적용
