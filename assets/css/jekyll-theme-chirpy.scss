@@ -1,0 +1,325 @@
+---
+---
+
+@use 'main';
+
+/* ══════════════════════════════════════════════════════════════
+   1. 타이포그래피 — 한글 웹폰트 적용
+   폰트 로드는 _includes/metadata-hook.html 에서 한다.
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --font-kr: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, 'Segoe UI', 'Malgun Gothic', sans-serif;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+.post-content,
+#sidebar .site-title,
+#sidebar .site-subtitle {
+  font-family: var(--font-kr);
+}
+
+body {
+  letter-spacing: -0.01em; /* 한글은 살짝 좁혀야 덜 성기다 */
+}
+
+.post-content {
+  line-height: 1.8;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   2. 홈 — 전체 폭 사용
+   :has() 로 홈에서만 우측 패널을 숨긴다. default.html 은 건드리지 않는다.
+   ══════════════════════════════════════════════════════════════ */
+
+body:has(.home) {
+  #panel-wrapper { display: none; }
+
+  main { /* col-xl-9 → 전체 폭 */
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.home {
+  max-width: 62rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+/* 섹션 공통 라벨 */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-muted-color);
+  margin: 0 0 0.35rem;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  border: 0;
+}
+
+/* ── ① Hero ───────────────────────────────────────────────── */
+
+.home-hero {
+  text-align: center;
+  padding: 3.5rem 1rem 3rem;
+}
+
+.hero-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 1.6rem;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-avatar--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-muted-color);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-color);
+}
+
+.hero-name {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  border: 0;
+}
+
+.hero-lead {
+  font-size: 1.18rem;
+  line-height: 1.75;
+  margin: 0 0 1.4rem;
+
+  em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--link-color);
+  }
+}
+
+.hero-sub {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--text-muted-color);
+  margin: 0 0 2rem;
+}
+
+.hero-stats {
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+  margin: 0 0 1.5rem;
+
+  span + span::before {
+    content: '·';
+    margin: 0 0.5rem;
+    opacity: 0.6;
+  }
+}
+
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  a {
+    color: var(--text-muted-color);
+    font-size: 1.05rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: var(--link-color);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* ── ② 올해 타임라인 ──────────────────────────────────────── */
+
+.home-timeline {
+  text-align: center;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--main-border-color);
+}
+
+.timeline-svg {
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.tl-axis {
+  stroke: var(--main-border-color);
+  stroke-width: 1;
+}
+
+.tl-dot {
+  fill: var(--main-border-color);
+}
+
+.tl-dot--on {
+  fill: var(--link-color);
+  opacity: 0.85;
+}
+
+.tl-now {
+  stroke: var(--link-color);
+  stroke-width: 1.5;
+  opacity: 0.5;
+}
+
+.tl-label {
+  fill: var(--text-muted-color);
+  font-size: 13px;
+}
+
+.timeline-foot {
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+  margin: 0;
+
+  a { margin-left: 0.5rem; }
+}
+
+/* ── ③④ 2단 ──────────────────────────────────────────────── */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--main-border-color);
+}
+
+@media (min-width: 992px) {
+  .home-grid {
+    grid-template-columns: 1.9fr 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* ③ 최근 글 */
+
+.recent-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid var(--main-border-color);
+
+  > li > a {
+    display: flex;
+    gap: 1rem;
+    padding: 0.9rem 0 0.9rem 1.25rem;
+    position: relative;
+    color: inherit;
+
+    &::before { /* 왼쪽 선 위의 마커 */
+      content: '';
+      position: absolute;
+      left: -3px;
+      top: 1.35rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--main-border-color);
+      transition: background 0.2s ease;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      &::before { background: var(--link-color); }
+      .rp-title { color: var(--link-color); }
+    }
+  }
+}
+
+.rp-num {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted-color);
+  padding-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.rp-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.rp-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.rp-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted-color);
+
+  time::before {
+    content: '·';
+    margin: 0 0.4rem;
+    opacity: 0.6;
+  }
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* ④ 요즘 보는 것 */
+
+.reading-group + .reading-group {
+  margin-top: 1.75rem;
+}
+
+.reading-kind {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text-muted-color);
+  margin: 0 0 0.6rem;
+}
+
+.home-reading ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li + li { margin-top: 0.85rem; }
+
+  a {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.reading-note {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--text-muted-color);
+  margin-top: 0.15rem;
+}

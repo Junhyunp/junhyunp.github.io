@@ -1,0 +1,24 @@
+# 홈 우측 "요즘 보는 것" 섹션.
+# 논문은 .blog-automation/papers.yml, 레포는 refs.yml 에서 검증된 것만 옮겨 적는다.
+# 글로 쓰기 전 단계의 것들을 노출해 재방문 이유를 만드는 자리다.
+
+- kind: PAPER
+  items:
+    - title: "TokenPilot: Cache-Efficient Context Management for LLM Agents"
+      url: https://arxiv.org/abs/2606.17016
+      note: "컨텍스트 압축으로 비용 절감"
+    - title: "The Missing Memory Hierarchy: Demand Paging for LLM Context Windows"
+      url: https://arxiv.org/abs/2603.09023
+      note: "컨텍스트를 OS 페이징처럼"
+
+- kind: REPO
+  items:
+    - title: "microsoft/LLMLingua"
+      url: https://github.com/microsoft/LLMLingua
+      note: "프롬프트 압축"
+    - title: "openclaw/openclaw"
+      url: https://github.com/openclaw/openclaw
+      note: "메신저로 부리는 AI 에이전트"
+    - title: "anthropics/claude-cookbooks"
+      url: https://github.com/anthropics/claude-cookbooks
+      note: "실행 가능한 공식 예제"

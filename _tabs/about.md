@@ -4,5 +4,25 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+LLM·VLM 개념을 하나씩 정리하고, 새로 나온 기술과 논문을 리뷰합니다.
+
+## 무엇을 씁니다
+
+| 카테고리 | 내용 |
+|---|---|
+| **Concept** | LLM·VLM의 개념과 용어를 하나씩 정리합니다. 토큰, 컨텍스트 윈도우, 임베딩, RAG 같은 것들입니다 |
+| **Tech** | 새로 나온 도구와 레포를 뜯어봅니다. 무엇을 할 수 있는지보다 어떻게 설계했는지를 봅니다 |
+| **Research** | 최신 논문을 리뷰합니다. 원문에서 저자·발표일·주장을 직접 확인하고 씁니다 |
+
+제목 앞의 대괄호는 기술 분야입니다. `[LLM]` `[VLM]` `[Agent]` 처럼 붙고, 같은 분야는 카테고리가 달라도 같은 접두사를 씁니다.
+
+## 쓰는 방식
+
+- 확인하지 않은 수치는 쓰지 않습니다. 인용한 숫자에는 기준 시점을 붙입니다
+- 출처는 1차 자료를 우선합니다 — 공식 문서, arXiv 원문, 공식 저장소
+- 실행해보지 않은 코드는 "이렇게 하면 된다"고 쓰지 않습니다
+
+## 연락
+
+- GitHub — [@Junhyunp](https://github.com/Junhyunp)
+- Email — dev@zerochord.ai

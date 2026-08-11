@@ -1,0 +1,159 @@
+---
+layout: default
+refactor: true
+---
+
+{% include lang.html %}
+
+{%- comment -%}
+  커스텀 홈. 테마 기본 home.html(페이지네이션 목록)을 대체한다.
+  구성: ① Hero ② 올해 타임라인 ③ 최근 글 ④ 요즘 보는 것
+  사이드 패널 숨김은 CSS(:has)에서 처리하므로 default.html 은 건드리지 않는다.
+{%- endcomment -%}
+
+{%- assign posts = site.posts | where_exp: 'p', 'p.hidden != true' -%}
+
+<div class="home">
+  {%- comment -%} ───────── ① Hero ───────── {%- endcomment -%}
+  <section class="home-hero">
+    {%- if site.avatar and site.avatar != '' -%}
+      <img class="hero-avatar" src="{{ site.avatar }}" alt="{{ site.social.name }}" width="96" height="96">
+    {%- else -%}
+      <div class="hero-avatar hero-avatar--empty" aria-hidden="true">{{ site.social.name | slice: 0 }}</div>
+    {%- endif -%}
+
+    <h1 class="hero-name">{{ site.social.name }}</h1>
+
+    <p class="hero-lead">
+      <em>LLM · VLM</em> 개념을 하나씩 정리하고<br>
+      새로 나온 <em>기술</em>과 <em>논문</em>을 리뷰합니다
+    </p>
+
+    <p class="hero-sub">CONCEPT · TECH · RESEARCH</p>
+
+    {%- assign first = posts | last -%}
+    {%- assign now_s = site.time | date: '%s' | plus: 0 -%}
+    {%- assign first_s = first.date | date: '%s' | plus: 0 -%}
+    {%- assign days = now_s | minus: first_s | divided_by: 86400 | plus: 1 -%}
+    <p class="hero-stats">
+      <span>글 {{ posts.size }}편</span>
+      <span>{{ days }}일째</span>
+    </p>
+
+    <nav class="hero-links" aria-label="Links">
+      <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS"><i class="fas fa-rss"></i></a>
+      <a href="mailto:{{ site.social.email }}" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </nav>
+  </section>
+
+  {%- comment -%} ───────── ② 올해 타임라인 ───────── {%- endcomment -%}
+  {%- assign this_year = site.time | date: '%Y' -%}
+  {%- assign this_month = site.time | date: '%m' | plus: 0 -%}
+  {%- assign year_count = 0 -%}
+  {%- assign max_month = 0 -%}
+
+  {%- comment -%} 월별 집계: 최대값을 먼저 구해 점 크기를 정규화한다 {%- endcomment -%}
+  {%- for m in (1..12) -%}
+    {%- assign mm = m | prepend: '0' | slice: -2, 2 -%}
+    {%- assign key = this_year | append: '-' | append: mm -%}
+    {%- assign c = 0 -%}
+    {%- for p in posts -%}
+      {%- assign pk = p.date | date: '%Y-%m' -%}
+      {%- if pk == key -%}{%- assign c = c | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign year_count = year_count | plus: c -%}
+    {%- if c > max_month -%}{%- assign max_month = c -%}{%- endif -%}
+  {%- endfor -%}
+
+  <section class="home-timeline">
+    <p class="section-label">{{ this_year }}</p>
+
+    <svg class="timeline-svg" viewBox="0 0 1000 74" role="img"
+         aria-label="{{ this_year }}년 월별 발행 추이">
+      <line x1="40" y1="30" x2="960" y2="30" class="tl-axis"/>
+
+      {%- for m in (1..12) -%}
+        {%- assign mm = m | prepend: '0' | slice: -2, 2 -%}
+        {%- assign key = this_year | append: '-' | append: mm -%}
+        {%- assign c = 0 -%}
+        {%- for p in posts -%}
+          {%- assign pk = p.date | date: '%Y-%m' -%}
+          {%- if pk == key -%}{%- assign c = c | plus: 1 -%}{%- endif -%}
+        {%- endfor -%}
+
+        {%- assign x = m | minus: 1 | times: 80 | plus: 60 -%}
+        {%- if c > 0 -%}
+          {%- assign r = c | times: 8 | divided_by: max_month | plus: 4 -%}
+          <circle cx="{{ x }}" cy="30" r="{{ r }}" class="tl-dot tl-dot--on">
+            <title>{{ this_year }}년 {{ m }}월 · {{ c }}편</title>
+          </circle>
+        {%- else -%}
+          <circle cx="{{ x }}" cy="30" r="2.5" class="tl-dot"/>
+        {%- endif -%}
+
+        {%- if m == 1 or m == 4 or m == 7 or m == 10 -%}
+          <text x="{{ x }}" y="60" class="tl-label" text-anchor="middle">{{ m }}월</text>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- assign nx = this_month | minus: 1 | times: 80 | plus: 60 -%}
+      <line x1="{{ nx }}" y1="14" x2="{{ nx }}" y2="46" class="tl-now"/>
+    </svg>
+
+    <p class="timeline-foot">
+      올해 {{ year_count }}편
+      <a href="{{ '/archives/' | relative_url }}">전체 타임라인 보기 →</a>
+    </p>
+  </section>
+
+  {%- comment -%} ───────── ③④ 2단 ───────── {%- endcomment -%}
+  <div class="home-grid">
+    <section class="home-recent">
+      <p class="section-label">RECENT POSTS</p>
+      <h2 class="section-title">최근 글</h2>
+
+      <ol class="recent-list">
+        {%- for post in posts limit: 5 -%}
+          <li>
+            <a href="{{ post.url | relative_url }}">
+              <span class="rp-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+              <span class="rp-body">
+                <span class="rp-title">{{ post.title }}</span>
+                <span class="rp-meta">
+                  {{ post.categories | first }}
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+                </span>
+              </span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ol>
+
+      {%- if posts.size > 5 -%}
+        <a class="more-link" href="{{ '/archives/' | relative_url }}">전체 글 보기 →</a>
+      {%- endif -%}
+    </section>
+
+    <aside class="home-reading">
+      <p class="section-label">READING NOW</p>
+      <h2 class="section-title">요즘 보는 것</h2>
+
+      {%- for group in site.data.reading -%}
+        <div class="reading-group">
+          <p class="reading-kind">{{ group.kind }}</p>
+          <ul>
+            {%- for item in group.items -%}
+              <li>
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+                {%- if item.note %}<span class="reading-note">{{ item.note }}</span>{% endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </aside>
+  </div>
+</div>

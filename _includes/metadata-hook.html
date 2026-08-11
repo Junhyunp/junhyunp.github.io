@@ -1,0 +1,11 @@
+<!-- 한국어 본문용 웹폰트. 테마 기본은 라틴 전용이라 한글이 시스템 폰트로 떨어진다. -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+>
+
+<!-- 네이버 서치어드바이저 소유확인 (jekyll-seo-tag 가 naver 를 지원하지 않아 직접 출력) -->
+{% if site.webmaster_verifications.naver %}
+  <meta name="naver-site-verification" content="{{ site.webmaster_verifications.naver }}">
+{% endif %}
