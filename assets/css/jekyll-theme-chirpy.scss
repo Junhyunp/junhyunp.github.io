@@ -71,16 +71,52 @@ body {
    :has() 로 홈에서만 우측 패널을 숨긴다. default.html 은 건드리지 않는다.
    ══════════════════════════════════════════════════════════════ */
 
+/* ── 사이드바를 전 페이지에서 기본 숨김 + 버튼으로 토글 ─────────
+   테마는 이 동작을 이미 갖고 있지만 lg 미만(모바일)에서만 켜 둔다.
+   같은 메커니즘([sidebar-display] 속성)을 데스크톱까지 확장한다.
+   - 기본: 화면 밖으로 밀어두고 #main-wrapper 의 좌측 여백을 회수
+   - 열림: 콘텐츠를 밀지 않고 위로 덮는다(오버레이). 넓은 화면에서 본문이
+           통째로 밀리면 시선이 튀기 때문.
+   ──────────────────────────────────────────────────────────── */
+
+$sidebar-w: 260px;
+$sidebar-w-lg: 300px;
+
+@media (min-width: 992px) {
+  #sidebar {
+    transform: translateX(-#{$sidebar-w});
+    transition: transform 0.35s ease;
+    z-index: 99;
+  }
+
+  [sidebar-display] #sidebar {
+    transform: translateX(0);
+  }
+
+  /* 사이드바가 차지하던 폭을 본문이 되찾는다 */
+  #main-wrapper {
+    margin-left: 0;
+  }
+
+  /* 햄버거 버튼을 데스크톱에서도 노출 (테마는 lg 미만에서만 보여준다) */
+  #sidebar-trigger {
+    display: block;
+  }
+}
+
+@media (min-width: 1650px) {
+  #sidebar {
+    transform: translateX(-#{$sidebar-w-lg});
+  }
+
+  [sidebar-display] #sidebar {
+    transform: translateX(0);
+  }
+}
+
 body:has(.home) {
-  /* 좌측 사이드바 · 우측 패널 모두 숨기고 중앙 정렬로 쓴다.
-     테마는 lg 이상에서 #main-wrapper 에 margin-left: $sidebar-width 를 준다. */
-  #sidebar { display: none; }
+  /* 홈은 우측 패널까지 빼고 중앙 정렬로 쓴다 */
   #panel-wrapper { display: none; }
-
-  #main-wrapper { margin-left: 0; }
-
-  /* 사이드바가 없으니 여는 버튼도 죽은 버튼이 된다 */
-  #sidebar-trigger { display: none; }
 
   main { /* col-xl-9 → 전체 폭 */
     flex: 0 0 100%;
