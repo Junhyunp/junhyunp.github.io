@@ -98,9 +98,12 @@ $sidebar-w-lg: 300px;
     margin-left: 0;
   }
 
-  /* 햄버거 버튼을 데스크톱에서도 노출 (테마는 lg 미만에서만 보여준다) */
+  /* 햄버거 버튼을 데스크톱에서도 노출 (테마는 lg 미만에서만 보여준다).
+     topbar 는 flex 라 DOM 순서상 breadcrumb 뒤에 오는데, order 로 맨 왼쪽에 둔다. */
   #sidebar-trigger {
     display: block;
+    order: -1;
+    margin-right: 0.75rem;
   }
 }
 
