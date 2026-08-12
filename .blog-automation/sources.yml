@@ -23,6 +23,27 @@ sources:
       긴 글은 1/ 2/ 3/ 로 나눠 댓글에 이어 붙이므로 본문만 보면 내용이 잘린다.
     active: true
 
+  - name: Simon Willison
+    platform: blog
+    url: https://simonwillison.net/
+    feed: https://simonwillison.net/atom/everything/
+    focus: "LLM 실무·도구를 거의 매일 기록. 새 모델·API 변화를 직접 써보고 쓴다"
+    active: true
+
+  - name: Lilian Weng
+    platform: blog
+    url: https://lilianweng.github.io/
+    feed: https://lilianweng.github.io/index.xml
+    focus: "에이전트·추론·안전을 장문으로 정리. 사실상 레퍼런스 문서라 인용 가치가 높다"
+    active: true
+
+  - name: Ethan Mollick
+    platform: blog
+    url: https://www.oneusefulthing.org/
+    feed: https://www.oneusefulthing.org/feed
+    focus: "AI 가 일하는 방식을 실증적으로. 기술보다 도입·활용 쪽 시사점"
+    active: true
+
   # ── 여기에 추가 ──────────────────────────────────────────────
   # - name: 표시할 이름
   #   platform: threads
