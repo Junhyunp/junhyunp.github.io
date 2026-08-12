@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <!-- ══════ 기존 방식 ══════ -->
+  <text x="24" y="28" font-size="14" font-weight="700" fill="#808080">기존 방식 — 필요 없는 부분을 자유롭게 잘라낸다</text>
+
+  <text x="24" y="58" font-size="12" fill="#808080">자르기 전</text>
+  <g font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="24"  y="66" width="200" height="34" rx="4" fill="#5B8DEF"/><text x="124" y="88">시스템 프리픽스</text>
+    <rect x="228" y="66" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="288" y="88">대화 A</text>
+    <rect x="352" y="66" width="120" height="34" rx="4" fill="#A66BBE"/><text x="412" y="88">대화 B</text>
+    <rect x="476" y="66" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="536" y="88">대화 C</text>
+    <rect x="600" y="66" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="660" y="88">대화 D</text>
+  </g>
+  <text x="736" y="88" font-size="12" fill="#808080">…</text>
+
+  <!-- B 제거 화살표 -->
+  <path d="M412 106 L412 124" stroke="#E05C5C" stroke-width="1.8" fill="none"/>
+  <path d="M408 118 L412 128 L416 118 Z" fill="#E05C5C"/>
+  <text x="424" y="124" font-size="12" fill="#E05C5C">B 를 제거</text>
+
+  <text x="24" y="156" font-size="12" fill="#808080">자른 뒤</text>
+  <g font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="24"  y="164" width="200" height="34" rx="4" fill="#5B8DEF"/><text x="124" y="186">시스템 프리픽스</text>
+    <rect x="228" y="164" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="288" y="186">대화 A</text>
+    <rect x="352" y="164" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="412" y="186">대화 C</text>
+    <rect x="476" y="164" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="536" y="186">대화 D</text>
+  </g>
+  <text x="612" y="186" font-size="12" fill="#808080">… 뒤가 통째로 앞으로 당겨짐</text>
+
+  <!-- 캐시 구간 -->
+  <path d="M24 208 L24 216 L348 216 L348 208" stroke="#3FB6A8" stroke-width="1.5" fill="none"/>
+  <text x="186" y="232" font-size="11.5" fill="#3FB6A8" text-anchor="middle">여기까지만 캐시 재사용</text>
+  <path d="M352 208 L352 216 L596 216 L596 208" stroke="#E05C5C" stroke-width="1.5" fill="none"/>
+  <text x="474" y="232" font-size="11.5" fill="#E05C5C" text-anchor="middle">이 뒤는 전부 다시 계산</text>
+
+  <line x1="24" y1="252" x2="776" y2="252" stroke="#808080" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+
+  <!-- ══════ TokenPilot ══════ -->
+  <text x="24" y="282" font-size="14" font-weight="700" fill="#F0A04B">TokenPilot — 앞을 고정하고 뒤에서만 정리한다</text>
+
+  <g font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <rect x="24"  y="300" width="200" height="34" rx="4" fill="#5B8DEF"/><text x="124" y="322">시스템 프리픽스</text>
+    <rect x="228" y="300" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="288" y="322">대화 A</text>
+    <rect x="352" y="300" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="412" y="322">대화 B</text>
+    <rect x="476" y="300" width="120" height="34" rx="4" fill="#3FB6A8"/><text x="536" y="322">대화 C</text>
+    <rect x="600" y="300" width="120" height="34" rx="4" fill="#E05C5C" fill-opacity="0.35" stroke="#E05C5C" stroke-dasharray="4 3"/>
+    <text x="660" y="322" fill="#E05C5C">수명 만료</text>
+  </g>
+
+  <rect x="24" y="292" width="200" height="50" rx="6" fill="none" stroke="#F0A04B" stroke-width="2"/>
+  <text x="124" y="360" font-size="11.5" fill="#F0A04B" text-anchor="middle">프리픽스 안정화 — 건드리지 않음</text>
+  <text x="660" y="360" font-size="11.5" fill="#E05C5C" text-anchor="middle">끝에서만 내보냄</text>
+
+  <path d="M24 372 L24 380 L596 380 L596 372" stroke="#3FB6A8" stroke-width="1.5" fill="none"/>
+  <text x="310" y="396" font-size="12" font-weight="600" fill="#3FB6A8" text-anchor="middle">앞부분 캐시가 그대로 살아남는다</text>
+</svg>
