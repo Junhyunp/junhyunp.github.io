@@ -50,7 +50,9 @@ topics:
     slug: llm-hallucination
     tags: [LLM, hallucination, RAG, reliability]
     note: "다음 토큰 예측 구조상 '모른다'보다 '그럴듯한 답'이 나오는 원리. 출처 요구·근거 인용·RAG·검증 질문으로 줄이는 실전 팁."
-    status: todo
+    status: done
+    published: 2026-08-12
+    post: 2026-08-12-llm-hallucination.md
 
   - id: 4
     category: Concept
