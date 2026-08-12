@@ -46,7 +46,8 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: "RcPoJMMmLskYacTqqaB6dQmTXGbBzhGUP3vWw-oewdM" # 구글 서치 콘솔
+  naver: "4bb38a43afc1bc575e6e1058e4cd88b0819b2459" # 네이버 (metadata-hook.html 에서 출력)
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
