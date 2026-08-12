@@ -33,20 +33,33 @@ def key
 end
 
 def sitemap_post_urls
-  xml = Net::HTTP.get(URI("#{SITE}/sitemap.xml"))
-  locs = xml.scan(%r{<loc>([^<]+)</loc>}).flatten
-  # lastmod 와 짝지어 최신순 정렬
-  entries = xml.scan(%r{<url>\s*<loc>([^<]+)</loc>\s*(?:<lastmod>([^<]*)</lastmod>)?}m)
-  posts = entries.select { |loc, _| loc.include?("/posts/") }
-  posts.sort_by { |_, mod| mod.to_s }.reverse.map(&:first)
+  post_entries.sort_by { |_, mod| mod.to_s }.reverse.map(&:first)
 rescue => e
   abort "!! 사이트맵을 읽지 못했습니다: #{e.message}"
+end
+
+def post_entries
+  xml = Net::HTTP.get(URI("#{SITE}/sitemap.xml"))
+  xml.scan(%r{<url>\s*<loc>([^<]+)</loc>\s*(?:<lastmod>([^<]*)</lastmod>)?}m)
+     .select { |loc, _| loc.include?("/posts/") }
+end
+
+# ⚠️ 같은 날 두 편을 올리면 lastmod 가 같아져 정렬 순서가 흔들린다.
+#    그래서 --latest 는 "가장 최근 lastmod 를 가진 것 전부" 를 제출한다.
+#    하루에 두 편을 냈다면 둘 다 알리는 게 맞기도 하다.
+def latest_post_urls
+  entries = post_entries
+  abort "!! 사이트맵에 글이 없습니다." if entries.empty?
+  newest = entries.map { |_, mod| mod.to_s }.max
+  picked = entries.select { |_, mod| mod.to_s == newest }.map(&:first)
+  puts "가장 최근 lastmod: #{newest} — #{picked.size}건"
+  picked
 end
 
 urls =
   case ARGV[0]
   when "--all"    then sitemap_post_urls
-  when "--latest" then sitemap_post_urls.first(1)
+  when "--latest" then latest_post_urls
   when nil        then abort("사용법: ruby .blog-automation/indexnow.rb <URL...> | --latest | --all")
   else ARGV
   end
