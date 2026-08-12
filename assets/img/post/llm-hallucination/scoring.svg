@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">채점 방식이 만드는 인센티브</text>
+  <text x="24" y="50" font-size="12" fill="#808080">모델은 시험을 잘 보도록 최적화됩니다. 그러면 채점표가 행동을 정합니다.</text>
+
+  <line x1="400" y1="70" x2="400" y2="330" stroke="#808080" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+
+  <!-- ══ 왼쪽: 지금 ══ -->
+  <text x="24" y="92" font-size="13.5" font-weight="700" fill="#E05C5C">지금의 채점</text>
+
+  <g font-size="12" font-weight="600" text-anchor="middle">
+    <rect x="24"  y="106" width="110" height="34" rx="5" fill="#3FB6A8"/><text x="79"  y="128" fill="#ffffff">맞음</text>
+    <rect x="24"  y="150" width="110" height="34" rx="5" fill="#E05C5C"/><text x="79"  y="172" fill="#ffffff">틀림</text>
+    <rect x="24"  y="194" width="110" height="34" rx="5" fill="#808080" fill-opacity="0.5"/><text x="79" y="216" fill="#ffffff">"모르겠다"</text>
+  </g>
+  <g font-size="15" font-weight="700" fill="#808080">
+    <text x="152" y="129">+1</text>
+    <text x="152" y="173">0</text>
+    <text x="152" y="217">0</text>
+  </g>
+  <g font-size="12" fill="#808080">
+    <text x="200" y="173">틀려도 잃는 게 없음</text>
+    <text x="200" y="217">모른다 해도 똑같이 0점</text>
+  </g>
+
+  <rect x="24" y="248" width="352" height="62" rx="6" fill="#E05C5C" fill-opacity="0.12" stroke="#E05C5C" stroke-opacity="0.45"/>
+  <text x="40" y="272" font-size="13" font-weight="700" fill="#808080">→ 확신이 없어도 찍는 게 항상 이득</text>
+  <text x="40" y="294" font-size="12" fill="#808080">기권할 이유가 없으니 그럴듯한 답을 만들어냅니다</text>
+
+  <!-- ══ 오른쪽: 바꾼다면 ══ -->
+  <text x="424" y="92" font-size="13.5" font-weight="700" fill="#3FB6A8">기권을 인정하는 채점</text>
+
+  <g font-size="12" font-weight="600" text-anchor="middle">
+    <rect x="424" y="106" width="110" height="34" rx="5" fill="#3FB6A8"/><text x="479" y="128" fill="#ffffff">맞음</text>
+    <rect x="424" y="150" width="110" height="34" rx="5" fill="#E05C5C"/><text x="479" y="172" fill="#ffffff">틀림</text>
+    <rect x="424" y="194" width="110" height="34" rx="5" fill="#5B8DEF"/><text x="479" y="216" fill="#ffffff">"모르겠다"</text>
+  </g>
+  <g font-size="15" font-weight="700" fill="#808080">
+    <text x="552" y="129">+1</text>
+    <text x="552" y="173">−1</text>
+    <text x="552" y="217">0</text>
+  </g>
+  <g font-size="12" fill="#808080">
+    <text x="600" y="173">틀리면 손해</text>
+    <text x="600" y="217">모른다고 하면 안 깎임</text>
+  </g>
+
+  <rect x="424" y="248" width="352" height="62" rx="6" fill="#3FB6A8" fill-opacity="0.12" stroke="#3FB6A8" stroke-opacity="0.45"/>
+  <text x="440" y="272" font-size="13" font-weight="700" fill="#808080">→ 확신이 없으면 기권이 이득</text>
+  <text x="440" y="294" font-size="12" fill="#808080">모른다고 말하는 편이 점수에 유리해집니다</text>
+
+  <text x="24" y="348" font-size="11" fill="#808080">※ 점수는 개념을 보이기 위한 예시입니다. 논문은 "기존 벤치마크의 채점을 고치자"고 할 뿐</text>
+  <text x="24" y="364" font-size="11" fill="#808080">   구체적인 배점표를 제시하지는 않습니다.</text>
+</svg>
