@@ -50,7 +50,15 @@ body {
    ══════════════════════════════════════════════════════════════ */
 
 body:has(.home) {
+  /* 좌측 사이드바 · 우측 패널 모두 숨기고 중앙 정렬로 쓴다.
+     테마는 lg 이상에서 #main-wrapper 에 margin-left: $sidebar-width 를 준다. */
+  #sidebar { display: none; }
   #panel-wrapper { display: none; }
+
+  #main-wrapper { margin-left: 0; }
+
+  /* 사이드바가 없으니 여는 버튼도 죽은 버튼이 된다 */
+  #sidebar-trigger { display: none; }
 
   main { /* col-xl-9 → 전체 폭 */
     flex: 0 0 100%;
@@ -159,6 +167,29 @@ body:has(.home) {
     &:hover {
       color: var(--link-color);
       transform: translateY(-2px);
+    }
+  }
+}
+
+/* 홈에서 사이드바를 숨기므로 유일한 이동 경로 */
+.hero-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.4rem;
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--main-border-color);
+
+  a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-muted-color);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--link-color);
+      text-decoration: none;
     }
   }
 }
