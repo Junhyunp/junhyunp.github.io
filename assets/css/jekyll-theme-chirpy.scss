@@ -121,6 +121,9 @@ body:has(.home) {
   /* 홈은 우측 패널까지 빼고 중앙 정렬로 쓴다 */
   #panel-wrapper { display: none; }
 
+  /* 홈에서 breadcrumb 은 "홈" 한 단어뿐이라 중복이다 */
+  #breadcrumb { display: none; }
+
   main { /* col-xl-9 → 전체 폭 */
     flex: 0 0 100%;
     max-width: 100%;
