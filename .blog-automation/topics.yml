@@ -78,8 +78,15 @@ topics:
     title: "RAG 기초 — 내 문서를 LLM에 물어보게 만들기"
     slug: rag-basics
     tags: [LLM, RAG, vector db, retrieval]
-    note: "청킹 → 임베딩 → 벡터DB 저장 → 질문 시 검색해서 프롬프트에 붙이기. 파인튜닝과의 차이와 선택 기준."
-    status: todo
+    note: >-
+      청킹 → 임베딩 → 벡터DB 저장 → 질문 시 검색해서 프롬프트에 붙이기.
+      발행본은 초보자 기준으로 잡았고, 색인 시점과 질의 시점을 나누는 것을 뼈대로 삼았다.
+      '답이 이상할 때 검색/청킹/생성 중 어디를 보나' 진단 절이 핵심.
+      파인튜닝과의 선택 기준은 넣지 않았다 — #7 finetune-vs-rag 몫으로 남겨둠.
+      끝에서 임베딩 편(#5)을 예고했으므로 그쪽이 부채로 남는다.
+    status: done
+    published: 2026-08-14
+    post: 2026-08-14-rag-basics.md
 
   - id: 7
     category: Concept
