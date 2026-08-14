@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">글을 숫자로 바꾸면 "비슷함"을 잴 수 있습니다</text>
+  <text x="24" y="50" font-size="12" fill="#808080">글자가 겹치지 않아도 뜻이 비슷하면 숫자가 가까워집니다. 이것이 임베딩이 하는 일입니다.</text>
+
+  <!-- ══ ① 글 → 숫자 ══ -->
+  <text x="24" y="88" font-size="12.5" font-weight="700" fill="#3FB6A8">① 글을 숫자 목록으로</text>
+
+  <g font-size="11" font-weight="600" text-anchor="middle" fill="#ffffff">
+    <rect x="24" y="106" width="150" height="30" rx="5" fill="#3FB6A8" fill-opacity="0.8"/><text x="99" y="126">출장비 정산 기한은?</text>
+    <rect x="24" y="150" width="150" height="30" rx="5" fill="#3FB6A8" fill-opacity="0.8"/><text x="99" y="170">여비 청구 마감일은?</text>
+    <rect x="24" y="194" width="150" height="30" rx="5" fill="#A66BBE" fill-opacity="0.8"/><text x="99" y="214">점심 메뉴 추천해줘</text>
+  </g>
+
+  <g stroke="#808080" stroke-width="1.2" fill="none" stroke-opacity="0.7">
+    <path d="M178 121 L194 121"/><path d="M178 165 L194 165"/><path d="M178 209 L194 209"/>
+  </g>
+  <g fill="#808080" fill-opacity="0.7">
+    <path d="M194 117 L202 121 L194 125 Z"/><path d="M194 161 L202 165 L194 169 Z"/><path d="M194 205 L202 209 L194 213 Z"/>
+  </g>
+
+  <g font-size="10.5" fill="#3FB6A8">
+    <text x="208" y="125">[ 0.21, -0.44, 0.07, ... ]</text>
+    <text x="208" y="169">[ 0.19, -0.41, 0.09, ... ]</text>
+  </g>
+  <text x="208" y="213" font-size="10.5" fill="#A66BBE">[ -0.55, 0.12, -0.38, ... ]</text>
+
+  <g font-size="10.5" fill="#808080">
+    <text x="24" y="256">앞의 두 줄은 겹치는 글자가 "은?" 뿐인데</text>
+    <text x="24" y="271">숫자는 서로 가깝습니다. 세 번째 줄은 멉니다.</text>
+  </g>
+
+  <!-- ══ ② 벡터 공간 ══ -->
+  <text x="430" y="88" font-size="12.5" font-weight="700" fill="#A66BBE">② 가까운 것이 비슷한 뜻</text>
+
+  <rect x="430" y="100" width="360" height="235" rx="6" fill="#808080" fill-opacity="0.05" stroke="#808080" stroke-opacity="0.3"/>
+
+  <circle cx="520" cy="170" r="65" fill="#3FB6A8" fill-opacity="0.08" stroke="#3FB6A8" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+
+  <circle cx="520" cy="170" r="6" fill="none" stroke="#3FB6A8" stroke-width="2.5"/>
+  <circle cx="490" cy="215" r="4.5" fill="#3FB6A8"/>
+  <circle cx="560" cy="210" r="4.5" fill="#3FB6A8"/>
+  <circle cx="700" cy="290" r="4.5" fill="#A66BBE"/>
+  <circle cx="740" cy="255" r="4.5" fill="#A66BBE"/>
+
+  <g font-size="10" fill="#808080">
+    <text x="533" y="166">질문: 출장비 정산 기한은?</text>
+    <text x="501" y="219">여비 청구 마감일</text>
+    <text x="571" y="214">출장 규정 3조</text>
+    <text x="688" y="294" text-anchor="end">점심 메뉴 추천</text>
+    <text x="728" y="259" text-anchor="end">회식 장소</text>
+  </g>
+
+  <text x="452" y="258" font-size="10.5" fill="#3FB6A8">이 안쪽을 꺼내옵니다</text>
+
+  <text x="24" y="366" font-size="11" fill="#808080">※ 실제 벡터는 수백~수천 차원입니다. 여기서는 2차원으로 줄여 그렸습니다.</text>
+  <text x="24" y="382" font-size="11" fill="#808080">   "가까움"은 보통 코사인 유사도로 잽니다. 원 안에 답이 있으리라는 보장은 없습니다.</text>
+</svg>

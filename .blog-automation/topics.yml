@@ -69,8 +69,16 @@ topics:
     title: "임베딩(Embedding)이란 — 의미를 숫자로 바꾸는 법"
     slug: embedding-basics
     tags: [LLM, embedding, vector, similarity]
-    note: "텍스트 → 벡터. 코사인 유사도로 '비슷한 문서 찾기'가 되는 원리. 검색·추천·RAG의 기반."
-    status: todo
+    note: >-
+      텍스트 → 벡터. 코사인 유사도로 '비슷한 문서 찾기'가 되는 원리. 검색·추천·RAG의 기반.
+      발행본은 rag-basics 가 결과만 쓰고 넘어간 부분을 받는 편으로 썼고, 초보자 기준이다.
+      word2vec King/Queen 예시에 유추 정확도 65.6% 를 같이 붙여 '마법이 아니다'를 못박았다.
+      Sentence-BERT 의 65시간 → 5초가 RAG 색인 단계가 성립하는 이유로 연결되고,
+      임베딩의 약점(철자·부정 표현)이 rag-basics 의 하이브리드 검색 권고로 되돌아가 두 글이 닫힌다.
+      새 예고는 만들지 않았다 — 예고 부채 0.
+    status: done
+    published: 2026-08-14
+    post: 2026-08-14-embedding-basics.md
 
   - id: 6
     category: Concept
