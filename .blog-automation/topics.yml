@@ -355,3 +355,45 @@ topics:
     status: done
     published: 2026-08-10
     post: 2026-08-10-continual-harness.md
+
+  - id: 36
+    category: Research
+    prefix: "Agent"
+    title: "하네스를 자동으로 고치는 두 갈래 — AutoDesign과 DarwinX"
+    slug: harness-search
+    tags: [Agent, harness, self-improvement, evolution, LLM]
+    note: >-
+      arXiv 2608.13560 (AutoDesign, 2026-08-13) + 2608.07545 (DarwinX, 2026-07-31) 대조 리뷰.
+      같은 문제(하네스 자동 개선)에 한 줄기 심화 vs 개체군 선택. DarwinX 초록이 단일 계보 탐색의
+      경로 의존성을 직접 지적해 두 논문이 맞물린다. 하네스 3부작(#34, #35, harness-engineering)의 4편.
+    status: done
+    published: 2026-08-14
+    post: 2026-08-14-harness-search.md
+
+  # ── 모델 소식 (2026-08-14 아침 브리핑에서 올라옴) ────────────────
+  # 출처: CHOI(threads, @choi.openai) + Simon Willison 블로그 교차 확인.
+  # ⚠️ 아직 1차 출처 미검증. 쓰기 전에 공식 발표·모델 카드·벤치마크 원본을 반드시 확인할 것.
+  - id: 37
+    category: Trend
+    prefix: "Model"
+    title: "Gemini 3.7 Flash — 3주 만의 갱신, 무엇이 달라졌나"
+    slug: gemini-37-flash
+    tags: [Model, Gemini, benchmark, LLM]
+    note: >-
+      2026-08-13 공개. CHOI 가 벤치마크(DeepSWE, FrontierCode)를 정리했고, 같은 날 Simon Willison 의
+      llm-gemini 0.33 이 지원을 추가해 출시 자체는 교차 확인됨. 다만 수치는 전부 2차 출처이므로
+      구글 공식 발표와 모델 카드에서 다시 확인한 뒤 쓴다. 3주 갱신 주기라는 서술도 확인 필요.
+    status: todo
+
+  - id: 38
+    category: Trend
+    prefix: "Model"
+    title: "8월 둘째 주 모델 소식 — DeepSeek V4 Pro, 추론 속도 경쟁, Computer History"
+    slug: model-roundup-2026-08
+    tags: [Model, DeepSeek, OpenAI, open weights]
+    note: >-
+      묶음 소식. (1) DeepSeek V4 Pro 0813 오픈 웨이트 — Willison 이 1.7T 파라미터로 적었으나 미검증.
+      (2) GPT-5.6 Sol Ultrafast — Cerebras 연동, 초당 750토큰·최대 14배 주장. 전부 미검증.
+      (3) ChatGPT Computer History — 앱·웹 상호작용 추적 기능. 프라이버시 쟁점을 같이 다뤄야 함.
+      셋 다 1차 출처(공식 블로그·모델 카드·문서)를 열어 확인한 것만 남기고, 확인 안 되면 뺀다.
+    status: todo
