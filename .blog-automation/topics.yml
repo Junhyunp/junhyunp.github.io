@@ -427,3 +427,22 @@ topics:
       영어와 다르게 동작하는 문제 — rag-basics 의 하이브리드 검색 권고가 한국어에서도 그대로인지.
       1차 출처 후보: papers.yml 의 2604.22095(비영어 RAG 사례). ⚠️ 아직 전부 미검증 — 수치를 쓰려면 원문부터.
     status: todo
+
+  # ── 2026-08-16 CHOI(threads) 경유 포착 → a16z 원문 검증 ────────
+  - id: 40
+    category: Trend
+    prefix: "Market"
+    title: "뉴클라우드 — 매출은 AWS보다 빨리 크는데 왜 어렵나"
+    slug: neocloud-economics
+    tags: [Market, neocloud, infrastructure, GPU, AI economy]
+    note: >-
+      a16z "Charts of the Week: Head In The Neoclouds"(Moses Sternstein, 2026-08-14) 원문 검증 후 작성.
+      접두사 Market 을 새로 만들었다 — AI 경제/인프라 축의 첫 글.
+      확인된 것만 씀: CoreWeave 25분기 vs AWS 40분기($2.6B 도달), 칩 감가상각이 매출의 절반 초과,
+      인프라 용도전환 계보(철도→광섬유/가스관→통신/케이블→광대역).
+      CHOI 가 적은 capex $7.1B 는 원문에 없어 뺐다.
+      "감가상각이 크니 요금이 오른다"는 추론도 리포트의 주장이 아니라서 빼고, 안 한다고 본문에 명시했다.
+      a16z 가 VC 라는 이해관계를 단서 첫 줄에 넣었다.
+    status: done
+    published: 2026-08-16
+    post: 2026-08-16-neocloud-economics.md
