@@ -412,3 +412,18 @@ topics:
       (3) ChatGPT Computer History — 앱·웹 상호작용 추적 기능. 프라이버시 쟁점을 같이 다뤄야 함.
       셋 다 1차 출처(공식 블로그·모델 카드·문서)를 열어 확인한 것만 남기고, 확인 안 되면 뺀다.
     status: todo
+
+  # ── 2026-08-14 RAG/임베딩 편에서 파생 ──────────────────────────
+  - id: 39
+    category: Concept
+    prefix: "LLM"
+    title: "한국어 RAG — 영어 기준 설정을 그대로 쓰면 안 되는 이유"
+    slug: korean-rag
+    tags: [LLM, RAG, embedding, Korean]
+    note: >-
+      embedding-basics 가 "영어 중심 모델이 많아 한국어 성능은 따로 확인해야 한다"고 적고 넘어간 부분을 받는 편.
+      다룰 것: (1) 토크나이저 차이로 청크 512 토큰이 한국어에서 실제로 담는 분량 — llm-token-basics 와 연결,
+      (2) MTEB 의 다국어 항목에서 한국어를 어떻게 볼 것인가, (3) 형태소 때문에 BM25 키워드 검색이
+      영어와 다르게 동작하는 문제 — rag-basics 의 하이브리드 검색 권고가 한국어에서도 그대로인지.
+      1차 출처 후보: papers.yml 의 2604.22095(비영어 RAG 사례). ⚠️ 아직 전부 미검증 — 수치를 쓰려면 원문부터.
+    status: todo

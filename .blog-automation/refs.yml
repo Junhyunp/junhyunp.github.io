@@ -134,6 +134,84 @@ papers:
     topics: [LLM]
     note: "컨텍스트 윈도우를 OS 의 페이징처럼 다루는 제안(Pichay). 컨텍스트를 L1 캐시에 비유 — 컨텍스트 윈도우 글(#2)의 비유 소재로 훌륭함."
 
+  # ── 2026-08-14 출처 검증분 (rag-basics / embedding-basics / harness-search) ──
+  # ⚠️ ✅본문 표시가 붙은 것은 초록에 없어 HTML 전문에서 확인한 수치다. 재인용 시 그대로 쓸 수 있다.
+
+  - title: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    url: https://arxiv.org/abs/2005.11401
+    date: 2020-05-22
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, RAG]
+    note: "Lewis 외. RAG 원논문 — 파라메트릭(가중치에 외운 지식) / 비파라메트릭(밖에서 찾아오는 지식) 구분의 정본. RAG 를 설명할 때 출발점."
+
+  - title: "Lost in the Middle: How Language Models Use Long Contexts"
+    url: https://arxiv.org/abs/2307.03172
+    date: 2023-07-06
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, RAG]
+    note: "Liu 외, TACL 2023. 관련 정보가 처음·끝에 있을 때 성능 최고, 중간에서 크게 저하. 긴 맥락 전용 모델에서도 나타남. '왜 다 붙여넣지 않는가'의 근거로 재사용도 높다."
+
+  - title: "Searching for Best Practices in Retrieval-Augmented Generation"
+    url: https://arxiv.org/abs/2407.01219
+    date: 2024-07-01
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, RAG]
+    note: >-
+      Wang 외. RAG 각 단계 선택지를 실험 비교. ✅본문: 하이브리드 검색(BM25+dense)+HyDE 를 기본 권고,
+      청크 512 토큰, 리랭커 monoT5(빼면 성능 눈에 띄게 하락). ⚠️ 2024-07 자료이고 논문 자체 데이터셋 기준 —
+      인용 시 날짜와 설정 의존성을 반드시 함께 적을 것. #7 파인튜닝 vs RAG 에 바로 재사용 가능.
+
+  - title: "Efficient Estimation of Word Representations in Vector Space"
+    url: https://arxiv.org/abs/1301.3781
+    date: 2013-01-16
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, embedding]
+    note: >-
+      Mikolov·Chen·Corrado·Dean. word2vec. ✅본문: King-Man+Woman≈Queen 문장과 유추 정확도
+      최고 65.6%(Skip-gram 1000차원·60억 단어). ⚠️ King/Queen 예시는 이 논문의 발견이 아니라
+      선행 연구 인용("it was shown for example that") — 저자 귀속에 주의.
+
+  - title: "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+    url: https://arxiv.org/abs/1908.10084
+    date: 2019-08-27
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, embedding, RAG]
+    note: "Reimers·Gurevych, EMNLP 2019. 1만 문장 유사쌍 탐색이 BERT 로 약 5천만 추론(약 65시간) → SBERT 약 5초. RAG 의 '미리 색인' 단계가 성립하는 이유."
+
+  - title: "MTEB: Massive Text Embedding Benchmark"
+    url: https://arxiv.org/abs/2210.07316
+    date: 2022-10-13
+    tier: 1
+    verified: 2026-08-14
+    topics: [LLM, embedding]
+    note: "Muennighoff 외. 8개 과제·58개 데이터셋·112개 언어에서 33개 모델 비교. 결론 '모든 과제에서 앞서는 방법은 없다' — 임베딩 모델 선택 질문의 정답지. 리더보드가 계속 갱신되므로 최신 순위는 HuggingFace 에서 재확인."
+
+  - title: "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design"
+    url: https://arxiv.org/abs/2608.13560
+    date: 2026-08-13
+    tier: 1
+    verified: 2026-08-14
+    topics: [Agent, harness]
+    note: >-
+      Luo 외. 단일 계보 하네스 자동 개선. ✅본문: 도구 호출 253회·편집 11턴·40분·$3 미만,
+      조합 7종, PosterBench 100편 5분야 + mini 10편. 초록에는 78.32 / 54.99→67.39 만 있음.
+
+  - title: "DarwinX: Evolving Agent Harnesses Through Natural Selection"
+    url: https://arxiv.org/abs/2608.07545
+    date: 2026-07-31
+    tier: 1
+    verified: 2026-08-14
+    topics: [Agent, harness]
+    note: >-
+      Zhang 외. 개체군 기반 하네스 진화. ✅본문: 동일 베이스 75.5%→83.2%(+7.7), audit-clean pass@1 표기.
+      ⚠️ WebArena-Infinity 43.5%→93.0% 는 audit-clean 단서 없이 단독 인용 금지.
+      "A frozen model need not be a fixed agent" 는 초록 마지막 문장이지 결론 마지막 문장이 아니다.
+
 blogs:
   - name: Sebastian Raschka — LLM Research Papers 2026
     url: https://magazine.sebastianraschka.com/p/llm-research-papers-2026-part1
@@ -154,3 +232,8 @@ blocked:
   - "제품명 + guide/hosting 형태의 신규 도메인 (crewclaw, oneclaw 류)"
   - "출처·저자 없이 숫자만 나열하는 'Top N' 요약 블로그"
   - "AI 로 대량 생성된 티스토리/미디엄 번역 요약글"
+  # ── 2026-08-14 추가 ──
+  - "벡터DB·검색 SaaS 업체의 'RAG best practices' 마케팅 블로그. 2026-08-14 RAG 검색 상위에
+     meilisearch.com / stackai.com / flotorch.ai 가 떴는데, 청크 크기·하이브리드 검색 권고의
+     근거가 서로를 가리키거나 아예 없다. 같은 내용이 arXiv 2407.01219 에 실험과 함께 있으니
+     그쪽을 쓴다. 방향 파악용으로 읽는 것은 무방하나 인용하지 않는다."
