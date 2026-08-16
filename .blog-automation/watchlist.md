@@ -81,3 +81,70 @@ blog-post 스킬이 글감을 찾으러 웹을 훑을 때마다 여기에 기록
 
 ★0 / 포크 0 레포가 "60% 절감" 마케팅 문구만으로 검색 1페이지에 올라옴.
 → **절감률·성능 수치를 내세운 도구일수록 `gh api` 검증을 먼저.** 수치가 자극적일수록 출처가 없을 확률이 높다.
+
+---
+
+> ⚠️ **기록 공백: 2026-08-10 ~ 2026-08-12.**
+> 이 기간에 5편(`prime-agent`, `continual-harness`, `tokenpilot`, `harness-engineering`, `claude-watermark`, `llm-hallucination`)이 나갔는데 스윕 기록이 없습니다.
+> 각 글의 `## 참고` 절에 출처가 남아 있으니 재조사가 필요하면 거기서 출발하면 됩니다.
+> **추측으로 채우지 않았습니다** — 직접 확인하지 않은 것을 검증된 것처럼 적으면 이 로그의 쓸모가 사라집니다.
+
+---
+
+## 2026-08-14 — 출처 검증 (하네스 탐색 / RAG / 임베딩)
+
+글감 스윕이 아니라 **발행 전 1차 출처 검증** 기록입니다. 이날 3편이 나갔습니다.
+
+### 논문 — 전부 arXiv 원문 확인
+
+| 논문 | 날짜 | 검증 | 쓰인 곳 |
+|---|---|---|---|
+| [AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design](https://arxiv.org/abs/2608.13560) | 2026-08-13 | ✅ arxiv 초록 **+ 본문** (Luo 외) | `harness-search` |
+| [DarwinX: Evolving Agent Harnesses Through Natural Selection](https://arxiv.org/abs/2608.07545) | 2026-07-31 | ✅ arxiv 초록 **+ 본문** (Zhang 외) | `harness-search` |
+| [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) | 2020-05-22 | ✅ arxiv 초록 (Lewis 외) | `rag-basics` — 파라메트릭/비파라메트릭 구분 |
+| [Lost in the Middle](https://arxiv.org/abs/2307.03172) | 2023-07-06 | ✅ arxiv 초록 (Liu 외, TACL 2023) | `rag-basics` — 중간 손실 인용문 |
+| [Searching for Best Practices in RAG](https://arxiv.org/abs/2407.01219) | 2024-07-01 | ✅ arxiv 초록 **+ 본문** (Wang 외) | `rag-basics` — 청크 512·하이브리드·리랭커 |
+| [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781) | 2013-01-16 | ✅ arxiv 초록 **+ 본문** (Mikolov 외) | `embedding-basics` — King/Queen, 65.6% |
+| [Sentence-BERT](https://arxiv.org/abs/1908.10084) | 2019-08-27 | ✅ arxiv 초록 (Reimers·Gurevych, EMNLP 2019) | `embedding-basics` — 65시간 → 5초 |
+| [MTEB: Massive Text Embedding Benchmark](https://arxiv.org/abs/2210.07316) | 2022-10-13 | ✅ arxiv 초록 (Muennighoff 외) | `embedding-basics` — 지배적 모델 없음 |
+
+### 초록에 없어 본문까지 열어야 했던 수치
+
+초록만 읽고 인용하면 틀렸을 것들입니다. **2차 출처가 흔히 인용하는 숫자일수록 본문에 있습니다.**
+
+| 수치 | 원문 |
+|---|---|
+| 253 도구 호출 / 11 편집턴 | `executes 253 tool calls and 11 editing turns within 40 minutes for under $3` |
+| 조합 7종 | `Across the seven completed configurations…` |
+| PosterBench 100편·5분야 + mini 10편 | `a 100-paper Main Track spanning five disciplines and PosterBench-mini, a shared 10-paper subset` |
+| 동일 베이스 +7.7 → 83.2% | `lifts base Monet from 75.5% to 83.2% (+7.7 points)` |
+| `audit-clean` 단서 | `We report audit-clean pass@1 throughout…` |
+| 청크 512 · 하이브리드 · 리랭커 | `we recommend Hybrid Search with HyDE as the default retrieval method` / `The absence of a reranking module led to a noticeable drop in performance` |
+| King/Queen · 유추 65.6% | `vector("King") - vector("Man") + vector("Woman") results in a vector that is closest to … Queen` / Skip-gram 1000차원·60억 단어 |
+
+### 인용 거부
+
+| 대상 | 이유 |
+|---|---|
+| Meilisearch / StackAI / FloTorch 블로그 | RAG 동향 파악용으로만 읽음. 2차 출처이고 수치 근거 불명확 → **본문 인용 안 함** |
+| 초보자 글의 벤치마크 점수 | 의도적 제외. 설정 의존적 숫자는 입문자에게 오해가 더 큼 |
+| WebArena-Infinity 43.5% → 93.0% | 인용하되 논문 자신의 `audit-clean` 단서를 붙이고 "이 숫자만 떼어 인용하지 말 것"을 본문에 명시 |
+
+### 검증으로 잡아낸 오류 2건
+
+- **`harness-search`** — 초안이 "DarwinX 의 마지막 문장"이라 한 인용문은 실제로 **초록의** 마지막 문장. 결론 마지막 문장은 따로 있음(`The harness is the surface that can still move…`). 발행 전 정정
+- **`embedding-basics`** — King/Queen 예시는 word2vec 논문의 발견이 아니라 **선행 연구 인용**(`it was shown for example that`). "논문 서두가 인용한 예"로 표기
+
+### 교훈
+
+**초록 검증은 검증의 절반이다.** 널리 인용되는 숫자일수록 본문에 있고, 초록만 보고 "확인했다"고 적으면 실제로는 2차 출처를 믿은 것과 같아진다.
+→ 본문 수치를 쓸 거면 **전문을 연다.** 열 수 없으면 그 수치를 뺀다.
+
+**유명한 예시는 출처가 한 단계 더 있을 수 있다.** King/Queen 처럼 어디서나 인용되는 예는 그 논문의 발견이 아닐 수 있으니, "누가 처음 보였나"를 문장 형태(`it was shown that`)로 확인한다.
+
+### 도구 함정 (GOTCHAS 후보)
+
+`WebFetch` 로 **`arxiv.org/pdf/<id>` 를 열면 압축 바이너리라 본문을 못 읽는다.** 대신:
+
+- 최신 논문(2024~) → `arxiv.org/html/<id>v1` — ⚠️ **버전 번호를 맞춰야 한다.** `v3` 은 404 인데 `v1` 은 열린 사례 있음
+- 오래된 논문(2013 등) → `ar5iv.labs.arxiv.org/html/<id>` 로 우회 성공
