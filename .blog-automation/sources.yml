@@ -15,7 +15,7 @@ sources:
     platform: threads
     handle: choi.openai
     url: https://www.threads.com/@choi.openai
-    followers: 266000        # 2026-08-12 확인
+    followers: 280000        # 2026-08-16 확인 (2026-08-12 에는 266,000)
     focus: "해외 AI 소식 번역·요약. 모델·제품 출시와 규제 이슈를 빠르게 전달"
     caution: >-
       계정명이 choi.openai 라 OpenAI 소속으로 오해하기 쉽다. 실제로는 OpenAI Codex
@@ -53,6 +53,32 @@ sources:
   #   caution: "인용 시 주의사항 (없으면 생략)"
   #   active: true
 
+# ── ⚠️ "스레드가 하나도 안 긁힌다" 는 증상의 원인 (2026-08-16 실측) ──
+#
+# 결론부터: **Threads 는 막히지 않았다. 클라우드 루틴의 egress 차단만이 원인이다.**
+# 같은 URL 을 로컬에서 열면 지금도 글 8건이 타임스탬프까지 정상적으로 나온다.
+#
+# 무엇으로 여느냐에 따라 결과가 완전히 다르다:
+#
+#   curl / 일반 HTTP  →  ❌ 글 0건.
+#       HTTP 200 에 256KB 가 오지만 순수 JavaScript 껍데기다.
+#       계정명·한글·og:description·본문 필드가 전부 0건이고, JSON 스크립트 블록만 27개 들어 있다.
+#       (`<meta name="bingbot" content="noarchive">` 도 붙어 있다)
+#       → curl 로 확인하고 "안 열린다"고 판단하면 오진이다.
+#
+#   WebFetch          →  ✅ 글 8건. 본문·상대 시각(42m ago 등)·스레드 번호(1/ 2/)·팔로워 수까지 나온다.
+#
+#   클라우드 루틴      →  ❌ EGRESS_BLOCKED. 2026-08-12 부터 닷새 연속 0건.
+#       루틴 로그(digest/2026-08-16.md)가 프록시 자체는 정상(`enabled: true`,
+#       `recentRelayFailures` 비어 있음)이라고 확인했다. 프록시 장애가 아니라
+#       조직 egress 정책이 취재원 4곳 + arXiv + Hugging Face Papers 를 의도적으로 막고 있다.
+#       루틴은 1차 출처를 못 열면 후보를 억지로 채우지 않고 0건으로 보고한다 — 설계대로다.
+#
+# → 고치려면 claude.ai/code 에서 Network access `Full` 인 `blog-digest` 환경을 만들어야 한다.
+#   그 전까지는 **로컬에서 WebFetch 로 훑는 것이 유일하게 동작하는 경로다.**
+#
+# RSS 는 없다. `/@handle/rss` 는 threads.com·threads.net 양쪽 다 404 (2026-08-16 확인).
+#
 # ── 조회 시 알아둘 것 (2026-08-12 실측) ────────────────────────
 #
 # 스레드 프로필은 초기 로드에 글이 7개 정도만 들어 있다. 그 아래는 무한스크롤이라
