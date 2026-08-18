@@ -60,8 +60,16 @@ topics:
     title: "Temperature와 Top-p — 답변이 매번 달라지는 이유"
     slug: temperature-top-p
     tags: [LLM, temperature, top-p, sampling]
-    note: "샘플링 파라미터 두 개의 차이와 실제 체감. 코드 생성은 낮게, 브레인스토밍은 높게 같은 용도별 권장값."
-    status: todo
+    note: >-
+      샘플링 파라미터 두 개의 차이와 실제 체감. 코드 생성은 낮게, 브레인스토밍은 높게 같은 용도별 권장값.
+      발행본은 여기에 두 가지를 더했다. (1) 최신 모델에서 이 파라미터가 사라지고 있다는 것 —
+      Anthropic 공식 마이그레이션 문서 기준 Opus 4.7 이후 모델에서 400 오류. 2026년에 이걸 빼면 낡은 글이 된다.
+      (2) '낮은 T = 항상 같은 답'이 아니라는 절 — 초보자가 가장 자주 기대하는데 보장되지 않는 지점.
+      그림의 막대는 로짓 [3.0, 2.0, 1.0, 0.5]에 소프트맥스를 실제로 계산한 값이고 본문 표와 숫자가 같다.
+      dataviz 검증기에서 대비 경고(2.42<3:1)가 떠서 직접 레이블 + 표 병기로 해소했다.
+    status: done
+    published: 2026-08-18
+    post: 2026-08-18-temperature-top-p.md
 
   - id: 5
     category: Concept

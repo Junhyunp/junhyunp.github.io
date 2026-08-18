@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">Temperature 는 분포 모양을, top-p 는 후보 개수를 바꿉니다</text>
+  <text x="24" y="47" font-size="12" fill="#808080">같은 후보 4개에 온도만 다르게 준 결과입니다. 회색 빗금은 top-p 0.9 에서 잘려나가는 쪽입니다.</text>
+
+  <!-- ══ T = 0.5 ══ -->
+  <text x="30" y="80" font-size="12.5" font-weight="700" fill="#3FB6A8">T = 0.5</text>
+  <text x="98" y="80" font-size="11" fill="#808080">뾰족합니다 · 거의 늘 같은 답</text>
+  <line x1="60" y1="248" x2="220" y2="248" stroke="#808080" stroke-width="1" stroke-opacity="0.35"/>
+  <path d="M69 248 L69 118 Q69 114 73 114 L99 114 Q103 114 103 118 L103 248 Z" fill="#3FB6A8"/>
+  <path d="M105 248 L105 234 Q105 230 109 230 L135 230 Q139 230 139 234 L139 248 Z" fill="#3FB6A8"/>
+  <rect x="141" y="246" width="34" height="2" fill="#808080" fill-opacity="0.45"/>
+  <rect x="177" y="247" width="34" height="1" fill="#808080" fill-opacity="0.45"/>
+  <text x="86" y="107" font-size="11" font-weight="700" text-anchor="middle" fill="#808080">0.86</text>
+  <text x="158" y="240" font-size="9.5" text-anchor="middle" fill="#808080">잘림</text>
+
+  <!-- ══ T = 1.0 ══ -->
+  <text x="290" y="80" font-size="12.5" font-weight="700" fill="#3FB6A8">T = 1.0</text>
+  <text x="358" y="80" font-size="11" fill="#808080">기본값 · 학습된 확률 그대로</text>
+  <line x1="320" y1="248" x2="480" y2="248" stroke="#808080" stroke-width="1" stroke-opacity="0.35"/>
+  <path d="M329 248 L329 154 Q329 150 333 150 L359 150 Q363 150 363 154 L363 248 Z" fill="#3FB6A8"/>
+  <path d="M365 248 L365 216 Q365 212 369 212 L395 212 Q399 212 399 216 L399 248 Z" fill="#3FB6A8"/>
+  <path d="M401 248 L401 239 Q401 235 405 235 L431 235 Q435 235 435 239 L435 248 Z" fill="#3FB6A8"/>
+  <rect x="437" y="240" width="34" height="8" fill="#808080" fill-opacity="0.45"/>
+  <text x="346" y="143" font-size="11" font-weight="700" text-anchor="middle" fill="#808080">0.63</text>
+  <text x="454" y="232" font-size="9.5" text-anchor="middle" fill="#808080">잘림</text>
+
+  <!-- ══ T = 1.5 ══ -->
+  <text x="550" y="80" font-size="12.5" font-weight="700" fill="#3FB6A8">T = 1.5</text>
+  <text x="618" y="80" font-size="11" fill="#808080">평평합니다 · 매번 달라짐</text>
+  <line x1="580" y1="248" x2="740" y2="248" stroke="#808080" stroke-width="1" stroke-opacity="0.35"/>
+  <path d="M589 248 L589 173 Q589 169 593 169 L619 169 Q623 169 623 173 L623 248 Z" fill="#3FB6A8"/>
+  <path d="M625 248 L625 212 Q625 208 629 208 L655 208 Q659 208 659 212 L659 248 Z" fill="#3FB6A8"/>
+  <path d="M661 248 L661 231 Q661 227 665 227 L691 227 Q695 227 695 231 L695 248 Z" fill="#3FB6A8"/>
+  <rect x="697" y="233" width="34" height="15" fill="#808080" fill-opacity="0.45"/>
+  <text x="606" y="162" font-size="11" font-weight="700" text-anchor="middle" fill="#808080">0.51</text>
+  <text x="714" y="225" font-size="9.5" text-anchor="middle" fill="#808080">잘림</text>
+
+  <g font-size="9.5" text-anchor="middle" fill="#808080" fill-opacity="0.8">
+    <text x="86" y="263">1위</text><text x="122" y="263">2위</text><text x="158" y="263">3위</text><text x="194" y="263">4위</text>
+    <text x="346" y="263">1위</text><text x="382" y="263">2위</text><text x="418" y="263">3위</text><text x="454" y="263">4위</text>
+    <text x="606" y="263">1위</text><text x="642" y="263">2위</text><text x="678" y="263">3위</text><text x="714" y="263">4위</text>
+  </g>
+
+  <text x="24" y="292" font-size="11" fill="#808080">※ 로짓 [3.0, 2.0, 1.0, 0.5]에 소프트맥스를 적용해 실제로 계산한 값입니다. 정확한 수치는 본문 표에 있습니다.</text>
+  <text x="24" y="308" font-size="11" fill="#808080">   같은 top-p 0.9 인데 T=0.5 에서는 2개, T=1.0·1.5 에서는 3개가 남습니다 — 두 손잡이는 맞물려 움직입니다.</text>
+</svg>
