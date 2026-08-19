@@ -189,3 +189,52 @@ X(트위터) 게시물은 `WebFetch` 가 **HTTP 402** 를 반환해 1차 확인�
 **리포트를 인용할 때는 발행 주체의 이해관계를 함께 적는다.** a16z 는 이 분야 투자사다. 숫자는 공개 실적에서 오지만 무엇을 강조할지에는 관점이 들어간다.
 
 **출처가 하지 않은 추론을 이어붙이지 않는다.** "감가상각이 크니 요금이 오른다"는 자연스럽지만 리포트의 주장이 아니라, 글에 **안 한다고 명시**했다.
+
+---
+
+## 2026-08-17 ~ 08-19 — 출처 검증 (파인튜닝 / 샘플링 / Gemini / 8월 묶음)
+
+큐 항목 4건(#7 #4 #37 #38)을 발행하며 1차 출처를 확인한 기록입니다.
+
+### 논문 — arXiv 원문 확인
+
+| 논문 | 날짜 | 쓰인 곳 |
+|---|---|---|
+| [Fine-Tuning or Retrieval?](https://arxiv.org/abs/2312.05934) | 2023-12-10 (Ovadia 외) | `finetune-vs-rag` — RAG 가 비지도 파인튜닝보다 일관되게 나음 |
+| [RAG vs Fine-tuning (Agriculture)](https://arxiv.org/abs/2401.08406) | 2024-01-16 (Balaguer 외) | `finetune-vs-rag` — 파인튜닝 +6%p 위에 RAG +5%p 누적 |
+| [The Curious Case of Neural Text Degeneration](https://arxiv.org/abs/1904.09751) | 2019-04-22, ICLR 2020 (Holtzman 외) | `temperature-top-p` — 핵 샘플링 원논문 |
+
+### 벤더 공식 문서 — 전부 1차
+
+| 출처 | 확인한 것 |
+|---|---|
+| [Anthropic 마이그레이션 가이드](https://platform.claude.com/docs/en/about-claude/models/migration-guide.md) | 샘플링 파라미터가 Opus 4.7 이후 400 오류. 대체는 프롬프트 |
+| [Gemini 3.7 / 3.6 Flash 모델 카드](https://deepmind.google/models/model-cards/gemini-3-7-flash/) | 출시일·컨텍스트 1M·출력 64K·지식 컷오프 2026-03(일부 2025-01) |
+| [Gemini API 모델 목록](https://ai.google.dev/gemini-api/docs/models) | Pro 최신이 `gemini-3.1-pro-preview`, 3.5 Pro 부재 |
+| [DeepSeek-V4-Pro-0813 모델 카드](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813) | **1.7T**·MIT·출력 384K |
+| [Cerebras 공식 블로그](https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai) | 750 tok/s·제한 프리뷰·가격 미공개·HLE 11h11m vs 78h27m |
+| [OpenAI Computer History 문서](https://learn.chatgpt.com/docs/customization/computer-history) | 기록 범위·기본 꺼짐·EEA/영국/스위스 제외·**암호화 안 됨 경고** |
+
+### 2차 출처가 틀렸던 것 / 맞았던 것
+
+- **CHOI 의 DeepSeek 1.7T 는 맞았습니다.** 2차 집계 사이트들이 1.6T·1.57T 로 엇갈렸는데 공식 카드가 1.7T 이고 Willison 도 1.7T 로 적었습니다
+- **큐 메모의 "3주 갱신"은 부정확했습니다.** 3.6 Flash 07-21 → 3.7 Flash 08-13 = **23일**. 제목까지 정정했습니다
+- **"최대 14배"는 확인 실패.** OpenAI 페이지 제목에만 있고 본문이 403 → 안 씀
+
+> 지난 회차에서는 CHOI 수치가 틀렸고(capex $7.1B, 인수가) 이번엔 맞았습니다.
+> → **SNS 를 일괄로 믿거나 안 믿는 문제가 아닙니다. 매번 원문을 여는 것 외에 방법이 없습니다.**
+
+### 확인 못 해서 뺀 것
+
+- DeepSeek V4 Pro 컨텍스트 길이 — 2차 출처는 1M 이라지만 공식 카드에 없어 본문에서 제외하고 "확인 못 했다"고 명시
+- Gemini "왜 Pro 가 늦나" — 구글이 설명한 적 없어 추측 금지
+
+### 도구 함정
+
+**openai.com 과 help.openai.com 은 `WebFetch` 에 HTTP 403 을 반환합니다.** `learn.chatgpt.com`(공식 문서 도메인)은 열립니다. OpenAI 1차 출처가 필요하면 이쪽을 먼저 시도합니다. GOTCHAS 에 별도 등록했습니다.
+
+### 교훈
+
+**같은 회사의 1차 출처라도 문서마다 담는 내용이 다릅니다.** Gemini 는 벤치마크·가격이 블로그에, 컨텍스트·지식 컷오프·한계는 모델 카드에, 계열 구성은 API 모델 목록에 있었습니다. 한 곳만 보고 "공식 확인"이라 하면 절반입니다.
+
+**모델 카드의 한계 서술을 읽습니다.** 발표 자료는 좋은 것만 적지만 모델 카드는 환각·타임아웃·암호화 미적용 같은 걸 스스로 적어둡니다. 인용 가치가 가장 높은 대목이 자주 여기 있습니다.
