@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">같은 날인데 겨루는 축이 서로 다릅니다</text>
+  <text x="24" y="50" font-size="12" fill="#808080">2026-08-13 에 나온 세 건입니다. 셋 다 "더 똑똑한 모델"을 내세우지 않았습니다.</text>
+
+  <rect x="24" y="72" width="240" height="180" rx="7" fill="#3FB6A8" fill-opacity="0.12" stroke="#3FB6A8" stroke-opacity="0.5"/>
+  <text x="44" y="100" font-size="13" font-weight="700" fill="#3FB6A8">축 1 · 오픈 웨이트</text>
+  <text x="44" y="126" font-size="12" font-weight="600" fill="#808080">DeepSeek V4 Pro 0813</text>
+  <text x="44" y="152" font-size="11" fill="#808080">가중치를 통째로 공개</text>
+  <text x="44" y="180" font-size="16" font-weight="700" fill="#3FB6A8">1.7T</text>
+  <text x="44" y="198" font-size="11" fill="#808080">파라미터 · MIT 라이선스</text>
+  <text x="44" y="226" font-size="11" fill="#808080">받아서 직접 돌릴 수 있다</text>
+
+  <rect x="280" y="72" width="240" height="180" rx="7" fill="#A66BBE" fill-opacity="0.12" stroke="#A66BBE" stroke-opacity="0.5"/>
+  <text x="300" y="100" font-size="13" font-weight="700" fill="#A66BBE">축 2 · 속도</text>
+  <text x="300" y="126" font-size="12" font-weight="600" fill="#808080">GPT-5.6 Sol Ultrafast</text>
+  <text x="300" y="152" font-size="11" fill="#808080">같은 모델을 더 빠르게</text>
+  <text x="300" y="180" font-size="16" font-weight="700" fill="#A66BBE">750 tok/s</text>
+  <text x="300" y="198" font-size="11" fill="#808080">출력 기준 · Cerebras 칩</text>
+  <text x="300" y="226" font-size="11" fill="#808080">제한 프리뷰 · 가격 미공개</text>
+
+  <rect x="536" y="72" width="240" height="180" rx="7" fill="#808080" fill-opacity="0.1" stroke="#808080" stroke-opacity="0.45"/>
+  <text x="556" y="100" font-size="13" font-weight="700" fill="#808080">축 3 · 맥락</text>
+  <text x="556" y="126" font-size="12" font-weight="600" fill="#808080">ChatGPT Computer History</text>
+  <text x="556" y="152" font-size="11" fill="#808080">내 컴퓨터 활동을 기억으로</text>
+  <text x="556" y="180" font-size="16" font-weight="700" fill="#808080">기본 꺼짐</text>
+  <text x="556" y="198" font-size="11" fill="#808080">macOS · Pro/Business/Ent</text>
+  <text x="556" y="226" font-size="11" fill="#808080">EEA·영국·스위스 제외</text>
+
+  <text x="24" y="284" font-size="11" fill="#808080">※ 세 건 다 각 회사의 공식 발표·모델 카드·공식 문서에서 확인한 내용입니다.</text>
+  <text x="24" y="300" font-size="11" fill="#808080">   같은 날 Gemini 3.7 Flash 도 나왔습니다 — 그쪽은 따로 다뤘습니다.</text>
+  <text x="24" y="316" font-size="11" fill="#808080">   수치는 발표 주체가 낸 것이고 제3자 검증은 아직 없습니다.</text>
+</svg>
