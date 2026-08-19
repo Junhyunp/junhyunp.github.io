@@ -482,3 +482,85 @@ topics:
     status: done
     published: 2026-08-16
     post: 2026-08-16-neocloud-economics.md
+
+  # ── 2026-08-19 로컬 스윕(CHOI + Willison)에서 나온 것들 ────────
+  - id: 41
+    category: Trend
+    prefix: "Model"
+    title: "27B가 1.7T를 1점 차로 따라붙었습니다 — Qwen 3.8 27B"
+    slug: qwen-38-27b
+    tags: [Model, Qwen, open weights, reasoning]
+    note: >-
+      Willison 이 이틀에 걸쳐 두 번 쓴 것을 보고 잡았다. 1차 출처: 공식 모델 카드 + Artificial Analysis.
+      ★ 최근 Trend 글과 달리 수치가 벤더 발표가 아니라 제3자(Artificial Analysis) 평가다.
+      핵심은 점수가 아니라 추론 강도 기본값 xhigh 문제 — 펠리컨 SVG 21분/추론 22,276토큰(생성분의 87%)
+      vs 추론 끔 137초. 약 9.2배.
+      Qwen 모델 카드는 멀티턴 에이전트 기준으로 그 기본값을 옹호한다 → 대립이 아니라 "상정한 사용자가 다르다"로 정리.
+      "63배 차이에 1점"이 가장 자극적인 문장이라 MoE 단서(전체 파라미터 기준이라 실제 연산량 차이는 더 작다)를 반드시 같이 넣었다.
+      temperature-top-p 와 model-roundup 두 편에 그대로 맞물린다.
+    status: done
+    published: 2026-08-19
+    post: 2026-08-19-qwen-38-27b.md
+
+  # ⚠️ 아래는 2026-08-19 스윕에서 포착만 한 것들. 전부 1차 출처 미검증.
+  - id: 42
+    category: Trend
+    prefix: "Policy"
+    title: "학습 데이터는 어디서 오나 — 희귀본 파쇄 스캔 추적"
+    slug: ai-training-data-books
+    tags: [Policy, training data, copyright, ethics]
+    note: >-
+      404 Media 가 에어태그로 대량 매입 서적의 배송을 추적했더니 Amazon AI 학습 시설로 갔고,
+      거기서 책을 파쇄 스캔(destructively scanned)한다는 보도. Willison 이 2026-08-17 에 링크.
+      ⚠️ 탐사보도라 검증 방식이 다르다 — 404 Media 자체가 1차 출처다. 원문을 열고, 저작권 쟁점은
+      단정하지 말 것. 이 블로그가 안 다뤄본 "학습 데이터 출처" 축이고 [Policy] 접두사가 맞다.
+    status: todo
+
+  - id: 43
+    category: Trend
+    prefix: "Model"
+    title: "GPT-5.6 비용 최적화 — 18배 절감은 어떻게 나온 수치인가"
+    slug: gpt56-cost-optimization
+    tags: [Model, OpenAI, cost, agent]
+    note: >-
+      OpenAI 가 에이전트 비용 절감 가이드를 냈다는 CHOI 소식(2026-08-19). 문서 추출 18배 절감,
+      검색 벤치마크 $33 → $1.3 주장. ⚠️ 전부 미검증.
+      openai.com 은 WebFetch 403 이므로 learn.chatgpt.com / 쿡북 도메인을 먼저 시도할 것 (GOTCHAS 참고).
+      토큰 글·뉴클라우드 글과 비용 축에서 이어진다.
+    status: todo
+
+  - id: 44
+    category: Tech
+    prefix: "Tool"
+    title: "Mojo 오픈소스화 — Python 상위집합을 포기하고 무엇을 얻었나"
+    slug: mojo-open-source
+    tags: [Tool, Mojo, open source, language]
+    note: >-
+      Willison 2026-08-18. Apache 2 로 오픈소스화. 원래 목표였던 "Python 완전 상위집합"에서
+      방향을 틀었다는 서술이 있어 그 지점이 글감. ⚠️ 미검증.
+      Tech 카테고리가 1편뿐이라 균형상 값어치가 있다.
+    status: todo
+
+  - id: 45
+    category: Trend
+    prefix: "Model"
+    title: "투기적 디코딩 — 맥북에서 27B를 초당 70토큰으로"
+    slug: speculative-decoding
+    tags: [Model, inference, speed, local LLM]
+    note: >-
+      Inco AI 의 DFlash 2. 맥북에서 27B 를 70 tok/s, 디코딩 4.6배 가속 주장(CHOI 2026-08-19). 미검증.
+      qwen-38-27b 와 같은 27B·로컬 축이라 묶거나 후속으로 붙일 수 있다.
+      개념 설명(초안 모델이 앞서 예측하고 본 모델이 검수)을 곁들이면 Concept 성격도 낼 수 있음.
+    status: todo
+
+  - id: 46
+    category: Tech
+    prefix: "Agent"
+    title: "Claude Cowork 모바일·웹 확장"
+    slug: claude-cowork-mobile
+    tags: [Agent, Claude, async, product]
+    note: >-
+      CHOI 2026-08-19. 기기가 꺼져 있어도 작업이 계속되고 모바일로 중간 확인. 미검증.
+      ⚠️ Anthropic 제품이므로 쓰기 전에 claude-api 스킬을 먼저 읽을 것(절대 규칙 7).
+      비동기 에이전트라는 축이 하네스 4부작과 이어진다.
+    status: todo
