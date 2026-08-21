@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">다섯 요소를 근거 강도로 다시 줄 세우면</text>
+  <text x="24" y="50" font-size="12" fill="#808080">흔히 맨 앞에 놓이는 "역할"이 근거는 가장 약합니다.</text>
+
+  <text x="40" y="78" font-size="10.5" font-weight="700" fill="#808080">요소</text>
+  <text x="150" y="78" font-size="10.5" font-weight="700" fill="#808080">근거</text>
+  <text x="240" y="78" font-size="10.5" font-weight="700" fill="#808080">확인된 것</text>
+  <line x1="24" y1="84" x2="776" y2="84" stroke="#808080" stroke-width="1" stroke-opacity="0.3"/>
+
+  <rect x="24" y="90" width="752" height="36" rx="4" fill="#3FB6A8" fill-opacity="0.08"/>
+  <text x="40" y="113" font-size="12.5" font-weight="700" fill="#808080">형식</text>
+  <rect x="150" y="98" width="42" height="20" rx="4" fill="#3FB6A8"/>
+  <text x="171" y="112" font-size="10.5" font-weight="700" text-anchor="middle" fill="#ffffff">강</text>
+  <text x="240" y="113" font-size="11.5" fill="#808080">논문이 "실제로 작동하는 요인"으로 직접 지목</text>
+
+  <rect x="24" y="132" width="752" height="36" rx="4" fill="#3FB6A8" fill-opacity="0.08"/>
+  <text x="40" y="155" font-size="12.5" font-weight="700" fill="#808080">예시</text>
+  <rect x="150" y="140" width="42" height="20" rx="4" fill="#3FB6A8"/>
+  <text x="171" y="154" font-size="10.5" font-weight="700" text-anchor="middle" fill="#ffffff">강</text>
+  <text x="240" y="155" font-size="11.5" fill="#808080">작동함. 다만 정답 여부는 생각보다 덜 중요</text>
+
+  <rect x="24" y="174" width="752" height="36" rx="4" fill="#3FB6A8" fill-opacity="0.08"/>
+  <text x="40" y="197" font-size="12.5" font-weight="700" fill="#808080">맥락</text>
+  <rect x="150" y="182" width="42" height="20" rx="4" fill="#3FB6A8"/>
+  <text x="171" y="196" font-size="10.5" font-weight="700" text-anchor="middle" fill="#ffffff">강</text>
+  <text x="240" y="197" font-size="11.5" fill="#808080">넣느냐보다 "어디에" 넣느냐가 성능을 가름</text>
+
+  <rect x="24" y="216" width="752" height="36" rx="4" fill="#808080" fill-opacity="0.07"/>
+  <text x="40" y="239" font-size="12.5" font-weight="700" fill="#808080">제약</text>
+  <rect x="150" y="224" width="42" height="20" rx="4" fill="#808080" fill-opacity="0.6"/>
+  <text x="171" y="238" font-size="10.5" font-weight="700" text-anchor="middle" fill="#ffffff">중</text>
+  <text x="240" y="239" font-size="11.5" fill="#808080">널리 쓰이지만 통제 실험 근거는 얇음 — 경험칙</text>
+
+  <rect x="24" y="258" width="752" height="36" rx="4" fill="#A66BBE" fill-opacity="0.1"/>
+  <text x="40" y="281" font-size="12.5" font-weight="700" fill="#808080">역할</text>
+  <rect x="150" y="266" width="42" height="20" rx="4" fill="#A66BBE"/>
+  <text x="171" y="280" font-size="10.5" font-weight="700" text-anchor="middle" fill="#ffffff">약</text>
+  <text x="240" y="281" font-size="11.5" fill="#808080">역할 162개 실험에서 향상 확인 안 됨</text>
+
+  <text x="24" y="316" font-size="11" fill="#808080">※ 근거로 삼은 논문은 2022~2023년 자료입니다. 그 뒤 모델에서도 같은지는 별도로 확인해야 합니다.</text>
+  <text x="24" y="332" font-size="11" fill="#808080">   "근거가 약하다"는 "쓰지 말라"가 아니라 "효과를 확신하지 말라"는 뜻입니다.</text>
+</svg>
