@@ -590,3 +590,27 @@ topics:
       ⚠️ Anthropic 제품이므로 쓰기 전에 claude-api 스킬을 먼저 읽을 것(절대 규칙 7).
       비동기 에이전트라는 축이 하네스 4부작과 이어진다.
     status: todo
+
+  # ── 2026-08-24 CHOI(threads) 경유 → Anthropic 공식 블로그 2편 검증 ──
+  - id: 47
+    category: Tech
+    prefix: "Tool"
+    title: "Anthropic이 공개한 스킬 아홉 분류 — 내 세트에 대봤습니다"
+    slug: claude-code-skills
+    tags: [Tool, Claude Code, skills, workflow]
+    note: >-
+      1차 출처 2편 모두 claude.com 공식 블로그.
+      Shihipar 2026-06-03(아홉 분류·수백 개 운용·"스킬은 폴더다"·검증이 가장 측정 가능한 영향·일주일 투자 권고)
+      + de Oliveira 2026-07-22(단독/내장/연쇄/PR 통합 실행 맥락 구분, /code-review→/simplify→/verify→/design 조합).
+      ★ 번역 요약 대신 분류표를 실제 개인 스킬 세트(claude-my-skills 10개)에 대보는 구성으로 갔다.
+        디렉토리를 직접 세어 확인한 발견 셋:
+        (1) 10개 중 9개가 마크다운 한 장. 유일한 폴더형은 Anthropic 번들 skill-creator(18파일·268KB)
+        (2) 제품 검증 칸이 빔. 단 검증이 없는 게 아니라 blog-post SKILL.md 안에 규칙 6곳으로 묻혀 재사용이 안 됨
+        (3) 10개 중 6개가 업무 프로세스 자동화로 쏠림. 라이브러리 레퍼런스·인프라 운영은 0
+      ⚠️ 사용자 개인 저장소 스킬명을 실명으로 노출 — 사전 승인 받음. 내용은 안 쓰고 분류·개수만.
+      단서 3개: 아홉 분류는 수백 개 굴리는 조직 기준 / "검증이 최고"도 측정 방법이 글에 없음 / 표본 1개.
+      결론이 아니라 "십 분 들여 자기 것을 대보라"는 방법을 판다.
+      Tech 카테고리가 1편 → 2편이 된다.
+    status: done
+    published: 2026-08-24
+    post: 2026-08-24-claude-code-skills.md
