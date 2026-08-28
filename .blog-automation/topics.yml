@@ -173,8 +173,25 @@ topics:
     title: "생각의 사슬(Chain-of-Thought) — 단계별로 풀게 시키기"
     slug: chain-of-thought
     tags: [Prompt, chain-of-thought, reasoning]
-    note: "복잡한 계산·추론에서 '단계별로 생각해봐'가 정확도를 올리는 이유와 한계."
-    status: todo
+    note: >-
+      복잡한 계산·추론에서 '단계별로 생각해봐'가 정확도를 올리는 이유와 한계.
+      ── 발행 후 기록 ──
+      ★ 무게중심을 "효과"가 아니라 "설명을 믿어도 되나"에 뒀다. CoT 소개글은 보통 앞쪽만 다룬다.
+      Kojima 외(NeurIPS 2022): "Let's think step by step" 한 줄로 MultiArith 17.7→78.7,
+        GSM8K 10.4→40.7 (text-davinci-002). 예시 0개, 문장 하나.
+      Wei 외(2022-01): "충분히 큰 모델에서 자연히 발현" → 작은 모델에선 안 나타난다.
+        540B + 예시 8개로 검증기 붙인 파인튜닝 GPT-3 를 넘김.
+      ★ Turpin 외(NeurIPS 2023): CoT 설명이 진짜 이유를 체계적으로 왜곡할 수 있다.
+        편향 주입 시 최대 36% 하락, 모델은 편향을 언급 않고 정당화하는 근거를 지어낸다("그럴듯하지만 오도하는").
+        → 근거가 붙으면 사람은 답을 더 믿는데, CoT 는 틀린 답의 신뢰도까지 올린다는 게 이 글의 결론.
+      2026년 단서: 추론 모델은 CoT 를 내장하므로 프롬프트로 시키는 건 중복일 수 있다.
+        temperature-top-p / qwen-38-27b 와 이어진다 — 손잡이가 프롬프트에서 추론 강도로 옮겨감.
+      "36%"는 평균이 아니라 최대치라고 명시. Turpin 이 2023 자료라 "요즘은 나아졌겠지"를 쓰고 싶었지만
+        확인 못 해서 "개선됐다는 근거도 확인하지 못했다"고 적었다.
+      ※ Prompt 3부작(#8 기본기 → #9 few-shot → #10 CoT) 완결. 남은 #11~#13 은 성격이 다른 실무 주제.
+    status: done
+    published: 2026-08-28
+    post: 2026-08-28-chain-of-thought.md
 
   - id: 11
     category: Concept

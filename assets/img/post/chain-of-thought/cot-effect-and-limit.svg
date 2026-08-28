@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">효과는 분명한데, 그 설명이 진짜 이유는 아닐 수 있습니다</text>
+  <text x="24" y="50" font-size="12" fill="#808080">"Let's think step by step" 한 줄을 붙였을 때의 정확도입니다 (text-davinci-002).</text>
+
+  <g font-size="10.5" fill="#808080">
+    <rect x="596" y="72" width="12" height="12" rx="2" fill="#808080" fill-opacity="0.45"/>
+    <text x="614" y="82">그냥 물었을 때</text>
+    <rect x="700" y="72" width="12" height="12" rx="2" fill="#3FB6A8"/>
+    <text x="718" y="82">한 줄 추가</text>
+  </g>
+
+  <line x1="160" y1="250" x2="640" y2="250" stroke="#808080" stroke-width="1" stroke-opacity="0.35"/>
+
+  <rect x="180" y="222" width="70" height="28" rx="4" fill="#808080" fill-opacity="0.45"/>
+  <text x="215" y="214" font-size="12" font-weight="700" text-anchor="middle" fill="#808080">17.7</text>
+  <rect x="256" y="124" width="70" height="126" rx="4" fill="#3FB6A8"/>
+  <text x="291" y="116" font-size="13" font-weight="700" text-anchor="middle" fill="#3FB6A8">78.7</text>
+  <text x="253" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#808080">MultiArith</text>
+
+  <rect x="460" y="233" width="70" height="17" rx="4" fill="#808080" fill-opacity="0.45"/>
+  <text x="495" y="225" font-size="12" font-weight="700" text-anchor="middle" fill="#808080">10.4</text>
+  <rect x="536" y="185" width="70" height="65" rx="4" fill="#3FB6A8"/>
+  <text x="571" y="177" font-size="13" font-weight="700" text-anchor="middle" fill="#3FB6A8">40.7</text>
+  <text x="533" y="270" font-size="12" font-weight="600" text-anchor="middle" fill="#808080">GSM8K</text>
+
+  <text x="150" y="254" font-size="10" text-anchor="end" fill="#808080">0</text>
+  <text x="150" y="94" font-size="10" text-anchor="end" fill="#808080">100</text>
+  <text x="24" y="174" font-size="10.5" fill="#808080">정확도(%)</text>
+
+  <rect x="24" y="292" width="752" height="76" rx="7" fill="#A66BBE" fill-opacity="0.12" stroke="#A66BBE" stroke-opacity="0.5"/>
+  <text x="44" y="316" font-size="12.5" font-weight="700" fill="#A66BBE">그런데 — 그 근거가 실제 이유가 아닐 수 있습니다</text>
+  <text x="44" y="338" font-size="11.5" fill="#808080">프롬프트에 편향을 심으면 정확도가 최대 36% 떨어지는데, 모델은 그 편향을 언급하지 않습니다.</text>
+  <text x="44" y="356" font-size="11.5" fill="#808080">대신 편향된 답을 정당화하는 그럴듯한 근거를 만들어냅니다 — "그럴듯하지만 오도하는" 설명입니다.</text>
+
+  <text x="24" y="390" font-size="11" fill="#808080">※ 위 수치는 Kojima 외(2022), 아래 서술은 Turpin 외(2023)입니다. 둘 다 초록에서 옮겼습니다. 자세한 출처는 본문 참고.</text>
+</svg>
