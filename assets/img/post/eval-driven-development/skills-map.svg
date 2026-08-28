@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">평가는 여섯 중 하나이고, 그 여섯은 넷 중 하나의 하위입니다</text>
+  <text x="24" y="47" font-size="12" fill="#808080">Andrew Ng 의 AI 엔지니어링 역량 지도. 이 글이 다루는 것은 보라색 칸입니다.</text>
+
+  <rect x="330" y="66" width="140" height="34" rx="6" fill="#808080" fill-opacity="0.55"/>
+  <text x="400" y="88" font-size="12.5" font-weight="700" text-anchor="middle" fill="#ffffff">AI Engineering</text>
+
+  <path d="M400 100 L400 116 M109 116 L679 116 M109 116 L109 132 M299 116 L299 132 M489 116 L489 132 M679 116 L679 132"
+        stroke="#808080" stroke-width="1.2" stroke-opacity="0.5" fill="none"/>
+
+  <g font-size="10.5" text-anchor="middle" fill="#808080">
+    <rect x="24" y="132" width="170" height="44" rx="6" fill="#3FB6A8" fill-opacity="0.18" stroke="#3FB6A8" stroke-width="1.8"/>
+    <text x="109" y="152" font-weight="700" fill="#3FB6A8">애플리케이션 구축·배포</text>
+    <text x="109" y="167" font-size="9.5" fill="#808080">← 이 아래를 펼친 것</text>
+
+    <rect x="214" y="132" width="170" height="44" rx="6" fill="#808080" fill-opacity="0.1" stroke="#808080" stroke-opacity="0.35"/>
+    <text x="299" y="159">소프트웨어 공학 기초</text>
+
+    <rect x="404" y="132" width="170" height="44" rx="6" fill="#808080" fill-opacity="0.1" stroke="#808080" stroke-opacity="0.35"/>
+    <text x="489" y="159">코딩 에이전트 활용</text>
+
+    <rect x="594" y="132" width="170" height="44" rx="6" fill="#808080" fill-opacity="0.1" stroke="#808080" stroke-opacity="0.35"/>
+    <text x="679" y="159">Shaping the build</text>
+  </g>
+
+  <path d="M109 176 L109 200 M85 200 L715 200 M85 200 L85 218 M211 200 L211 218 M337 200 L337 218 M463 200 L463 218 M589 200 L589 218 M715 200 L715 218"
+        stroke="#3FB6A8" stroke-width="1.2" stroke-opacity="0.5" fill="none"/>
+
+  <g font-size="10.5" text-anchor="middle" fill="#808080">
+    <rect x="26" y="218" width="118" height="52" rx="6" fill="#3FB6A8" fill-opacity="0.14"/>
+    <text x="85" y="242">LLM 기초</text>
+    <text x="85" y="257" font-size="9" fill="#808080">토큰·컨텍스트·컷오프</text>
+
+    <rect x="152" y="218" width="118" height="52" rx="6" fill="#3FB6A8" fill-opacity="0.14"/>
+    <text x="211" y="242">데이터 그라운딩</text>
+    <text x="211" y="257" font-size="9" fill="#808080">RAG·지식그래프</text>
+
+    <rect x="278" y="218" width="118" height="52" rx="6" fill="#3FB6A8" fill-opacity="0.14"/>
+    <text x="337" y="242">에이전트 시스템</text>
+    <text x="337" y="257" font-size="9" fill="#808080">하네스·도구·메모리</text>
+
+    <rect x="404" y="218" width="118" height="52" rx="6" fill="#A66BBE"/>
+    <text x="463" y="242" font-weight="700" fill="#ffffff">평가 주도 개발</text>
+    <text x="463" y="257" font-size="9" fill="#ffffff">이 글의 주제</text>
+
+    <rect x="530" y="218" width="118" height="52" rx="6" fill="#3FB6A8" fill-opacity="0.14"/>
+    <text x="589" y="242">프로덕션 운영</text>
+    <text x="589" y="257" font-size="9" fill="#808080">관측·비용·지연</text>
+
+    <rect x="656" y="218" width="118" height="52" rx="6" fill="#3FB6A8" fill-opacity="0.14"/>
+    <text x="715" y="242">ML 기초</text>
+    <text x="715" y="257" font-size="9" fill="#808080">편향/분산·오류분석</text>
+  </g>
+
+  <text x="24" y="300" font-size="11" fill="#808080">※ Ng 의 원 도표를 참고해 계층만 남기고 다시 그렸습니다. 원 이미지를 가져다 쓰지 않았습니다.</text>
+  <text x="24" y="316" font-size="11" fill="#808080">   Ng 은 이 지도를 "다수의 채용 공고 분석, 구조화된 전문가 인터뷰, 설문 응답"으로 만들었다고 밝혔습니다.</text>
+  <text x="24" y="332" font-size="11" fill="#808080">   "Shaping the build" 는 원문이 이 글에서 다루지 않아 우리말로 옮기지 않고 그대로 두었습니다.</text>
+</svg>

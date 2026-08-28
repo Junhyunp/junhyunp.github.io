@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="28" font-size="15" font-weight="700" fill="#808080">채점하는 모델도 순서에 흔들립니다</text>
+  <text x="24" y="50" font-size="12" fill="#808080">두 답의 내용은 그대로 두고, 심판에게 보여주는 순서만 바꿉니다.</text>
+
+  <rect x="24" y="72" width="352" height="186" rx="7" fill="#808080" fill-opacity="0.06" stroke="#808080" stroke-opacity="0.35"/>
+  <text x="44" y="96" font-size="12" font-weight="700" fill="#808080">순서 ①</text>
+
+  <rect x="48" y="108" width="304" height="32" rx="5" fill="#3FB6A8" fill-opacity="0.7"/>
+  <text x="200" y="129" font-size="11.5" font-weight="600" text-anchor="middle" fill="#ffffff">먼저 — A 모델의 답</text>
+  <rect x="48" y="146" width="304" height="32" rx="5" fill="#A66BBE" fill-opacity="0.55"/>
+  <text x="200" y="167" font-size="11.5" font-weight="600" text-anchor="middle" fill="#ffffff">나중 — B 모델의 답</text>
+
+  <path d="M200 182 L200 196" stroke="#808080" stroke-width="1.4" fill="none"/>
+  <path d="M196 192 L200 202 L204 192 Z" fill="#808080"/>
+
+  <rect x="48" y="206" width="304" height="38" rx="6" fill="none" stroke="#3FB6A8" stroke-width="1.8"/>
+  <text x="200" y="230" font-size="12" font-weight="700" text-anchor="middle" fill="#3FB6A8">심판: 먼저 나온 쪽이 낫다</text>
+
+  <rect x="424" y="72" width="352" height="186" rx="7" fill="#808080" fill-opacity="0.06" stroke="#808080" stroke-opacity="0.35"/>
+  <text x="444" y="96" font-size="12" font-weight="700" fill="#808080">순서 ② — 내용은 그대로, 위치만 교환</text>
+
+  <rect x="448" y="108" width="304" height="32" rx="5" fill="#A66BBE" fill-opacity="0.55"/>
+  <text x="600" y="129" font-size="11.5" font-weight="600" text-anchor="middle" fill="#ffffff">먼저 — B 모델의 답</text>
+  <rect x="448" y="146" width="304" height="32" rx="5" fill="#3FB6A8" fill-opacity="0.7"/>
+  <text x="600" y="167" font-size="11.5" font-weight="600" text-anchor="middle" fill="#ffffff">나중 — A 모델의 답</text>
+
+  <path d="M600 182 L600 196" stroke="#808080" stroke-width="1.4" fill="none"/>
+  <path d="M596 192 L600 202 L604 192 Z" fill="#808080"/>
+
+  <rect x="448" y="206" width="304" height="38" rx="6" fill="none" stroke="#A66BBE" stroke-width="1.8"/>
+  <text x="600" y="230" font-size="12" font-weight="700" text-anchor="middle" fill="#A66BBE">심판: 판정이 뒤집힌다</text>
+
+  <rect x="24" y="272" width="752" height="46" rx="7" fill="#A66BBE" fill-opacity="0.12" stroke="#A66BBE" stroke-opacity="0.5"/>
+  <text x="400" y="292" font-size="12.5" font-weight="700" text-anchor="middle" fill="#A66BBE">이 방식으로 Vicuna-13B 가 ChatGPT 를 80문항 중 66문항에서 이기게 만들 수 있었습니다</text>
+  <text x="400" y="310" font-size="11" text-anchor="middle" fill="#808080">심판도 ChatGPT 였습니다. 답을 고친 게 아니라 제시 순서만 바꿨습니다.</text>
+
+  <text x="24" y="344" font-size="11" fill="#808080">※ Wang 외(2023) 초록의 서술을 그림으로 옮긴 것입니다. 원문에는 이런 도식이 없습니다.</text>
+</svg>
