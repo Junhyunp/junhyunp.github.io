@@ -44,6 +44,17 @@ sources:
     focus: "AI 가 일하는 방식을 실증적으로. 기술보다 도입·활용 쪽 시사점"
     active: true
 
+  - name: Trillion Labs Research
+    platform: blog
+    url: https://blog.trillionlabs.co/
+    focus: >-
+      한국 LLM 팀의 연구 블로그. 최신 논문을 한국어로 깊이 있게 풀어 쓴다.
+      번역이 아니라 방법·가정·한계까지 짚는 편이라 논문 스윕의 실마리로 쓸 만하다.
+    caution: >-
+      대체로 남의 논문을 소개하는 형식이다. 여기서 본 수치를 쓰려면 원논문을 따로 열어야 한다.
+      이 블로그 자체는 1차 출처가 아니다.
+    active: true
+
   # ── 여기에 추가 ──────────────────────────────────────────────
   # - name: 표시할 이름
   #   platform: threads
