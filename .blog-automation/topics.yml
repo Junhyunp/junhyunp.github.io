@@ -670,3 +670,26 @@ topics:
     status: done
     published: 2026-08-28
     post: 2026-08-28-eval-driven-development.md
+
+  - id: 49
+    category: Concept
+    prefix: "LLM"
+    title: "AI 엔지니어링 역량 지도 — 내 글 23편을 대봤더니 두 칸이 비었습니다"
+    slug: ai-engineering-skills-map
+    tags: [LLM, AI engineering, skills, roadmap]
+    note: >-
+      eval-driven-development 에서 근거로만 쓴 Ng 지도를 한 편으로 정리. claude-code-skills 와 같은 방법
+      (남의 분류표를 자기 것에 대보기) — 그때는 9칸, 이번엔 6칸.
+      ★ 원문을 봤기 때문에 나온 발견 둘:
+        (1) 2단 구조 — 최상위 4개 중 "애플리케이션 구축·배포"의 하위가 6개다. 한국어 요약들이 이걸 뭉개
+            "여섯 가지 역량"으로만 옮긴다. 이 계층을 알아야 claude-code-skills 글이 최상위 "코딩 에이전트 활용"에
+            해당한다는 대응이 보인다.
+        (2) 에이전트 칸에 Ng 이 적어둔 가드레일·적대적 입력·데이터 유출·거버넌스 — 요약본에 없던 내용.
+      ★ 대조 결과: 앞 세 칸 11편 vs 뒤 세 칸 1편. 읽고 정리해 쓸 수 있는 쪽으로 기울었다.
+        에이전트 칸은 4편이라 채워 보이지만 전부 하네스 자기개선이고 안전·거버넌스는 0편 — 칸 이름만 세면 안 보인다.
+        지도 밖 8편(정책·산업·소식·도구)은 빈칸이 아니라 범위 밖. Ng 지도는 "만드는 일"만 다룬다.
+      단서: 지도는 Ng 개인 정리이고 근거 데이터는 비공개 / 빈칸이 결함은 아님 / 대응은 내 해석 / 23편은 3주 치.
+      "빈칸 = 할 일 목록"으로 쓰지 않았다.
+    status: done
+    published: 2026-08-29
+    post: 2026-08-29-ai-engineering-skills-map.md
