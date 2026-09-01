@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">거부를 똑같이 없애도, 모델이 망가지는 정도는 다릅니다</text>
+  <text x="24" y="48" font-size="12" fill="#808080">gemma-3-12b-it 하나에 세 가지 방식을 적용한 결과. 셋 다 거부는 3/100 으로 같습니다.</text>
+
+  <line x1="100" y1="70" x2="100" y2="300" stroke="#808080" stroke-width="1" stroke-opacity="0.45"/>
+  <line x1="100" y1="300" x2="720" y2="300" stroke="#808080" stroke-width="1" stroke-opacity="0.45"/>
+
+  <g font-size="10" fill="#808080" fill-opacity="0.8">
+    <text x="92" y="304" text-anchor="end">0</text>
+    <text x="92" y="194" text-anchor="end">50</text>
+    <text x="92" y="84" text-anchor="end">100</text>
+    <text x="100" y="318" text-anchor="middle">0</text>
+    <text x="350" y="318" text-anchor="middle">0.5</text>
+    <text x="600" y="318" text-anchor="middle">1.0</text>
+  </g>
+
+  <text x="34" y="176" font-size="10.5" font-weight="700" fill="#808080" transform="rotate(-90 34 176)" text-anchor="middle">유해 프롬프트 100개 중 거부한 횟수</text>
+  <text x="410" y="340" font-size="10.5" font-weight="700" fill="#808080" text-anchor="middle">원본 모델과의 KL 발산 — 무해한 프롬프트에서 (클수록 원본이 망가진 것)</text>
+
+  <line x1="180" y1="293" x2="620" y2="293" stroke="#808080" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+
+  <circle cx="100" cy="87" r="6" fill="#808080"/>
+  <text x="114" y="83" font-size="11.5" font-weight="700" fill="#808080">원본 gemma-3-12b-it</text>
+  <text x="114" y="98" font-size="10.5" fill="#808080">97/100 거부 · KL 0 (기준점)</text>
+
+  <circle cx="180" cy="293" r="6" fill="#3FB6A8"/>
+  <text x="180" y="272" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">Heretic</text>
+  <text x="180" y="286" font-size="10.5" fill="#3FB6A8" text-anchor="middle">KL 0.16</text>
+
+  <circle cx="325" cy="293" r="6" fill="#A66BBE" fill-opacity="0.6"/>
+  <text x="325" y="272" font-size="11.5" font-weight="700" fill="#A66BBE" text-anchor="middle">huihui-ai</text>
+  <text x="325" y="286" font-size="10.5" fill="#A66BBE" text-anchor="middle">KL 0.45</text>
+
+  <circle cx="620" cy="293" r="6" fill="#A66BBE"/>
+  <text x="620" y="272" font-size="11.5" font-weight="700" fill="#A66BBE" text-anchor="middle">mlabonne v2</text>
+  <text x="620" y="286" font-size="10.5" fill="#A66BBE" text-anchor="middle">KL 1.04</text>
+
+  <text x="400" y="245" font-size="11" font-weight="700" fill="#808080" text-anchor="middle">거부 억제는 셋 다 3/100 — 손상은 6.5배 차이</text>
+
+  <line x1="24" y1="356" x2="776" y2="356" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="374" font-size="11" fill="#808080">※ 이 표는 Heretic 저자가 자기 도구로 직접 잰 값입니다(RTX 5090, PyTorch 2.8). 제3자 재현은 확인하지 못했습니다.</text>
+  <text x="24" y="390" font-size="11" fill="#808080">   KL 발산은 "무해한" 프롬프트에서 원본과 출력 분포가 얼마나 벌어졌는지입니다 — 거부와 무관한 능력의 훼손을 재는 대리 지표입니다.</text>
+</svg>
