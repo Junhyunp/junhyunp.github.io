@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">321바이트를 무엇이 차지하고 있나</text>
+  <text x="24" y="48" font-size="12" fill="#808080">eli5 스킬 파일 전체입니다. 칸 너비가 실제 바이트 수에 비례합니다.</text>
+
+  <text x="263" y="90" font-size="11.5" font-weight="700" fill="#A66BBE" text-anchor="middle">언제 발동할지 — 158 B</text>
+  <text x="584" y="90" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">무엇을 할지 — 116 B</text>
+  <path d="M263 96 L263 108 M584 96 L584 108" stroke="#808080" stroke-width="1" stroke-opacity="0.4"/>
+
+  <rect x="50" y="110" width="41" height="44" fill="#808080" fill-opacity="0.35"/>
+  <rect x="91" y="110" width="345" height="44" fill="#A66BBE"/>
+  <rect x="436" y="110" width="22" height="44" fill="#808080" fill-opacity="0.35"/>
+  <rect x="458" y="110" width="253" height="44" fill="#3FB6A8"/>
+  <rect x="711" y="110" width="39" height="44" fill="#808080" fill-opacity="0.5"/>
+
+  <text x="263" y="138" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">description</text>
+  <text x="584" y="138" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">본문 지시 한 문장</text>
+
+  <path d="M70 154 L70 176 M447 154 L447 190 M730 154 L730 176" stroke="#808080" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="70" y="190" font-size="10" fill="#808080" text-anchor="middle">name·구분선</text>
+  <text x="70" y="203" font-size="10" fill="#808080" text-anchor="middle">19 B</text>
+  <text x="447" y="204" font-size="10" fill="#808080" text-anchor="middle">제목·빈 줄 10 B</text>
+  <text x="730" y="190" font-size="10" fill="#808080" text-anchor="middle">$ARGUMENTS</text>
+  <text x="730" y="203" font-size="10" fill="#808080" text-anchor="middle">18 B</text>
+
+  <text x="400" y="240" font-size="12.5" font-weight="700" fill="#808080" text-anchor="middle">언제 부를지 적은 글이, 무엇을 하라고 적은 글보다 1.36배 깁니다</text>
+
+  <line x1="24" y1="260" x2="776" y2="260" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="278" font-size="11" fill="#808080">※ 2026-09-02 에 anthropics/claude-plugins-community 의 원본 파일을 직접 받아 바이트를 셌습니다. 총 321 B, 10줄.</text>
+  <text x="24" y="292" font-size="11" fill="#808080">   description 은 프론트매터에 있고, 스킬을 언제 꺼낼지 고르는 데 쓰입니다. 본문은 꺼낸 뒤에야 읽힙니다.</text>
+</svg>
