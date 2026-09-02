@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">에이전트가 스스로 악성 스킬을 써서 저장한 과제의 비율</text>
+  <text x="24" y="48" font-size="12" fill="#808080">논문 용어로 ASPR. 공격자가 심은 스킬을 부른 비율이 아니라, 에이전트가 흉내내어 새로 만든 비율입니다.</text>
+
+  <line x1="210" y1="72" x2="210" y2="268" stroke="#808080" stroke-width="1" stroke-opacity="0.4"/>
+  <g font-size="10" fill="#808080" fill-opacity="0.8" text-anchor="middle">
+    <text x="210" y="286">0%</text>
+    <text x="485" y="286">50%</text>
+    <text x="760" y="286">100%</text>
+  </g>
+  <line x1="485" y1="72" x2="485" y2="268" stroke="#808080" stroke-width="1" stroke-opacity="0.15"/>
+
+  <g font-size="11" fill="#808080">
+    <text x="200" y="97" text-anchor="end">감싸는 구조 없이 페이로드만</text>
+    <rect x="210" y="82" width="61" height="22" rx="4" fill="#A66BBE" fill-opacity="0.45"/>
+    <text x="281" y="97" font-size="11.5" font-weight="700" fill="#A66BBE">11.1%</text>
+
+    <text x="200" y="135" text-anchor="end">EvoMal — 모델 6개 범위</text>
+    <rect x="322" y="120" width="118" height="22" rx="4" fill="#A66BBE"/>
+    <text x="450" y="135" font-size="11.5" font-weight="700" fill="#A66BBE">20.3 ~ 41.8%</text>
+
+    <text x="200" y="173" text-anchor="end">심은 것을 지운 뒤 5라운드</text>
+    <rect x="210" y="158" width="374" height="22" rx="4" fill="#A66BBE"/>
+    <text x="594" y="173" font-size="11.5" font-weight="700" fill="#A66BBE">68%</text>
+
+    <text x="200" y="211" text-anchor="end">과제군에 맞춰 다듬으면</text>
+    <rect x="210" y="196" width="477" height="22" rx="4" fill="#A66BBE"/>
+    <text x="697" y="211" font-size="11.5" font-weight="700" fill="#A66BBE">86.7%</text>
+
+    <text x="200" y="253" text-anchor="end" font-weight="700">counter-prompt 방어 뒤</text>
+    <rect x="210" y="238" width="37" height="22" rx="4" fill="#3FB6A8"/>
+    <text x="257" y="253" font-size="11.5" font-weight="700" fill="#3FB6A8">6.7% 이하</text>
+  </g>
+
+  <text x="640" y="253" font-size="10.5" fill="#3FB6A8" text-anchor="middle">과제 완수율 손실은 유의하지 않았다고 밝힘</text>
+
+  <line x1="24" y1="300" x2="776" y2="300" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="318" font-size="11" fill="#808080">※ 세 번째 막대가 이 공격의 성질입니다 — 심어둔 스킬을 <tspan font-weight="700">전부 지운 뒤에도</tspan> 에이전트가 만든 사본이 남아 계속 번집니다.</text>
+  <text x="24" y="334" font-size="11" fill="#808080">※ 6개 모델 · SWE-bench Verified 중 도구 관련 153개 과제. 2026-09-02 에 arXiv 2608.25776v1 초록에서 확인했습니다.</text>
+</svg>
