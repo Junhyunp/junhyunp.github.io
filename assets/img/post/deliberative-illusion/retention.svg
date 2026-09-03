@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">3라운드 토론이 끝난 뒤 남아 있는 핵심 사실의 비율</text>
+  <text x="24" y="48" font-size="12" fill="#808080">두 묶음은 서로 다른 실험입니다. 묶음을 가로질러 비교하지 마십시오.</text>
+
+  <text x="24" y="80" font-size="10.5" font-weight="700" fill="#A66BBE">악성 에이전트 실험 — 넷 중 하나가 거짓 정보를 들고 들어옴</text>
+  <line x1="24" y1="86" x2="776" y2="86" stroke="#808080" stroke-width="1" stroke-opacity="0.3"/>
+
+  <g font-size="11.5" fill="#808080">
+    <text x="240" y="112" text-anchor="end">정상 토론</text>
+    <rect x="250" y="96" width="209" height="24" rx="4" fill="#808080" fill-opacity="0.45"/>
+    <text x="469" y="113" font-size="12.5" font-weight="700" fill="#808080">46.5%</text>
+
+    <text x="240" y="150" text-anchor="end" font-weight="700">악성 에이전트 1명</text>
+    <rect x="250" y="134" width="87" height="24" rx="4" fill="#A66BBE"/>
+    <text x="347" y="151" font-size="12.5" font-weight="700" fill="#A66BBE">19.3%</text>
+  </g>
+
+  <text x="24" y="192" font-size="10.5" font-weight="700" fill="#3FB6A8">모델 구성 실험 — 같은 계열끼리 vs 다른 계열을 섞음</text>
+  <line x1="24" y1="198" x2="776" y2="198" stroke="#808080" stroke-width="1" stroke-opacity="0.3"/>
+
+  <g font-size="11.5" fill="#808080">
+    <text x="240" y="224" text-anchor="end">같은 계열끼리</text>
+    <rect x="250" y="208" width="161" height="24" rx="4" fill="#3FB6A8" fill-opacity="0.45"/>
+    <text x="421" y="225" font-size="12.5" font-weight="700" fill="#3FB6A8">35.7%</text>
+
+    <text x="240" y="262" text-anchor="end" font-weight="700">다른 계열을 섞으면</text>
+    <rect x="250" y="246" width="269" height="24" rx="4" fill="#3FB6A8"/>
+    <text x="529" y="263" font-size="12.5" font-weight="700" fill="#3FB6A8">59.8%</text>
+  </g>
+
+  <line x1="250" y1="90" x2="250" y2="276" stroke="#808080" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="250" y="290" font-size="10" fill="#808080" text-anchor="middle">0%</text>
+  <text x="700" y="290" font-size="10" fill="#808080" text-anchor="middle">100%</text>
+
+  <line x1="24" y1="306" x2="776" y2="306" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="324" font-size="11" fill="#808080">※ 어느 쪽도 절반을 크게 넘지 못합니다. 모델을 섞는 것이 가장 나은 완화책이었지만 라운드가 갈수록 여전히 줄었습니다.</text>
+  <text x="24" y="340" font-size="11" fill="#808080">※ 에이전트 4명 · 3라운드. 2026-09-03 에 arXiv 2606.03032v1 본문에서 확인했습니다.</text>
+  <text x="24" y="356" font-size="11" fill="#808080">※ 왼쪽 두 값과 아래 두 값은 실험 설정이 달라 같은 축에 놓았을 뿐 직접 비교 대상이 아닙니다.</text>
+</svg>
