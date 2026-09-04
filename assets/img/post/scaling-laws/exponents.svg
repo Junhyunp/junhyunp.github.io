@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">같은 질문에 나온 지수들 — 연산을 늘릴 때 모델 크기를 얼마나 키울 것인가</text>
+  <text x="24" y="48" font-size="12" fill="#808080">N₍opt₎ ∝ C의 지수. 큰 차이는 방법론에서, 작은 차이는 적합 방식에서 옵니다.</text>
+
+  <text x="24" y="88" font-size="11" font-weight="700" fill="#A66BBE">Kaplan 2020 — 임베딩을 <tspan text-decoration="underline">뺀</tspan> 파라미터로 셈</text>
+  <circle cx="628" cy="112" r="8" fill="#A66BBE"/>
+  <text x="628" y="136" font-size="13" font-weight="700" fill="#A66BBE" text-anchor="middle">0.73</text>
+
+  <text x="24" y="168" font-size="11" font-weight="700" fill="#3FB6A8">Chinchilla 2022 — 임베딩을 <tspan text-decoration="underline">포함한</tspan> 전체 파라미터로 셈 (적합 방식 셋)</text>
+  <circle cx="196" cy="192" r="7" fill="#3FB6A8" fill-opacity="0.6"/>
+  <circle cx="244" cy="192" r="7" fill="#3FB6A8" fill-opacity="0.8"/>
+  <circle cx="260" cy="192" r="7" fill="#3FB6A8"/>
+  <text x="196" y="216" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">0.46</text>
+  <text x="240" y="230" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">0.49</text>
+  <text x="278" y="216" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">0.50</text>
+
+  <line x1="100" y1="250" x2="740" y2="250" stroke="#808080" stroke-width="1" stroke-opacity="0.45"/>
+  <g font-size="10" fill="#808080" text-anchor="middle">
+    <line x1="100" y1="250" x2="100" y2="256" stroke="#808080" stroke-opacity="0.45"/>
+    <line x1="260" y1="250" x2="260" y2="256" stroke="#808080" stroke-opacity="0.45"/>
+    <line x1="420" y1="250" x2="420" y2="256" stroke="#808080" stroke-opacity="0.45"/>
+    <line x1="580" y1="250" x2="580" y2="256" stroke="#808080" stroke-opacity="0.45"/>
+    <line x1="740" y1="250" x2="740" y2="256" stroke="#808080" stroke-opacity="0.45"/>
+    <text x="100" y="270">0.40</text>
+    <text x="260" y="270">0.50</text>
+    <text x="420" y="270">0.60</text>
+    <text x="580" y="270">0.70</text>
+    <text x="740" y="270">0.80</text>
+  </g>
+
+  <line x1="24" y1="288" x2="776" y2="288" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="306" font-size="11" fill="#808080">※ 큰 간격(0.50 ↔ 0.73)의 주된 원인은 <tspan font-weight="700">무엇을 파라미터로 셌는가</tspan>와 작은 규모에서 재고 외삽한 것이라고 Pearce &amp; Song(2024)이 규명했습니다.</text>
+  <text x="24" y="322" font-size="11" fill="#808080">※ 세 점의 작은 간격은 한 논문 <tspan font-weight="700">안에서</tspan> 적합 방법을 바꿨을 때의 차이입니다. 그중 0.46 을 낸 세 번째 방법은 이후 재현되지 않았습니다.</text>
+  <text x="24" y="338" font-size="11" fill="#808080">※ 2026-09-04 에 arXiv 2001.08361 · 2203.15556 · 2406.12907 · 2404.10102 원문에서 확인했습니다.</text>
+</svg>
