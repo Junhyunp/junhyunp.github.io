@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">공개된 두 시스템 프롬프트의 거부 항목을 대조했습니다</text>
+  <text x="24" y="48" font-size="12" fill="#808080">Anthropic 이 공개한 원문에서 refusal_handling 부분만 뽑아 항목으로 옮겼습니다.</text>
+
+  <rect x="24" y="70" width="360" height="34" rx="6" fill="#808080" fill-opacity="0.15"/>
+  <text x="204" y="86" font-size="12" font-weight="700" fill="#808080" text-anchor="middle">Claude Opus 5</text>
+  <text x="204" y="99" font-size="10" fill="#808080" text-anchor="middle">2026-07-24</text>
+
+  <rect x="416" y="70" width="360" height="34" rx="6" fill="#A66BBE" fill-opacity="0.16"/>
+  <text x="596" y="86" font-size="12" font-weight="700" fill="#A66BBE" text-anchor="middle">Claude Fable 5.1</text>
+  <text x="596" y="99" font-size="10" fill="#808080" text-anchor="middle">2026-09-01</text>
+
+  <g font-size="11.5" fill="#808080">
+    <text x="44" y="132">· 아동 안전</text>
+    <text x="44" y="160">· 무기·유해물질</text>
+    <text x="44" y="188">· 악성 코드</text>
+    <text x="44" y="216">· 실존 공인 관련 창작</text>
+
+    <text x="436" y="132">· 아동 안전</text>
+    <text x="436" y="160">· 무기·유해물질</text>
+    <text x="436" y="188">· 악성 코드</text>
+    <text x="436" y="216">· 실존 공인 관련 창작</text>
+  </g>
+
+  <rect x="416" y="232" width="360" height="30" rx="5" fill="#808080" fill-opacity="0.13"/>
+  <text x="436" y="252" font-size="11.5" fill="#808080">· 불법 약물 (해악 감소 정보는 허용)</text>
+
+  <rect x="416" y="266" width="360" height="30" rx="5" fill="#A66BBE" fill-opacity="0.22"/>
+  <text x="436" y="286" font-size="11.5" font-weight="700" fill="#A66BBE">· 가사 · 시 · 책과 기사의 구절</text>
+
+  <rect x="416" y="300" width="360" height="30" rx="5" fill="#A66BBE" fill-opacity="0.22"/>
+  <text x="436" y="320" font-size="11.5" font-weight="700" fill="#A66BBE">· 시각 · 디자인 저작물 (코드로 그리는 것 포함)</text>
+
+  <text x="204" y="286" font-size="11" fill="#808080" text-anchor="middle" fill-opacity="0.8">저작권 관련 항목 없음</text>
+
+  <line x1="24" y1="346" x2="776" y2="346" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="364" font-size="11" fill="#808080">※ 다만 IP 관련 알림(ip_reminder)은 <tspan font-weight="700">7월 프롬프트에도 이미 있었습니다.</tspan> 9월에 새로 생긴 것은 본문의 명시적 조항입니다.</text>
+  <text x="24" y="378" font-size="11" fill="#808080">※ 2026-09-06 에 platform.claude.com 의 공개 문서에서 직접 대조했습니다. 이 프롬프트들은 앱용이고 API 에는 적용되지 않습니다.</text>
+</svg>
