@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">같은 모델, 같은 벤치마크 — 위아래를 가른 것은 하네스입니다</text>
+  <text x="24" y="48" font-size="12" fill="#808080">GPT-6 Astra 의 ARC-AGI-3 점수. 가로축은 추론을 얼마나 하게 했는지(effort)입니다.</text>
+
+  <line x1="120" y1="90" x2="700" y2="90" stroke="#808080" stroke-width="1" stroke-opacity="0.15"/>
+  <line x1="120" y1="205" x2="700" y2="205" stroke="#808080" stroke-width="1" stroke-opacity="0.15"/>
+  <line x1="120" y1="320" x2="700" y2="320" stroke="#808080" stroke-width="1" stroke-opacity="0.45"/>
+  <g font-size="10" fill="#808080" fill-opacity="0.85" text-anchor="end">
+    <text x="110" y="94">100%</text>
+    <text x="110" y="209">50%</text>
+    <text x="110" y="324">0%</text>
+  </g>
+
+  <polyline points="120,97.6 232,94.6 344,93.7 456,90.2 568,93.7 680,93.2"
+            fill="none" stroke="#3FB6A8" stroke-width="2.4"/>
+  <g fill="#3FB6A8">
+    <circle cx="120" cy="97.6" r="4.5"/><circle cx="232" cy="94.6" r="4.5"/><circle cx="344" cy="93.7" r="4.5"/>
+    <circle cx="456" cy="90.2" r="5.5"/><circle cx="568" cy="93.7" r="4.5"/><circle cx="680" cy="93.2" r="4.5"/>
+  </g>
+  <text x="120" y="80" font-size="11" font-weight="700" fill="#3FB6A8" text-anchor="middle">96.7</text>
+  <text x="456" y="76" font-size="12" font-weight="700" fill="#3FB6A8" text-anchor="middle">99.9</text>
+
+  <polyline points="120,239.0 232,279.7 344,231.2 456,194.0 568,183.6 680,175.8"
+            fill="none" stroke="#A66BBE" stroke-width="2.4"/>
+  <g fill="#A66BBE">
+    <circle cx="120" cy="239.0" r="4.5"/><circle cx="232" cy="279.7" r="4.5"/><circle cx="344" cy="231.2" r="4.5"/>
+    <circle cx="456" cy="194.0" r="4.5"/><circle cx="568" cy="183.6" r="4.5"/><circle cx="680" cy="175.8" r="5.5"/>
+  </g>
+  <text x="232" y="297" font-size="11" font-weight="700" fill="#A66BBE" text-anchor="middle">17.5</text>
+  <text x="680" y="164" font-size="12" font-weight="700" fill="#A66BBE" text-anchor="middle">62.7</text>
+
+  <text x="700" y="118" font-size="11.5" font-weight="700" fill="#3FB6A8">Provider Adapter 하네스</text>
+  <text x="700" y="150" font-size="11.5" font-weight="700" fill="#A66BBE">기본(Standard) 하네스</text>
+
+  <g font-size="10.5" fill="#808080" text-anchor="middle">
+    <text x="120" y="340">none</text>
+    <text x="232" y="340">low</text>
+    <text x="344" y="340">medium</text>
+    <text x="456" y="340">high</text>
+    <text x="568" y="340">xhigh</text>
+    <text x="680" y="340">max</text>
+  </g>
+  <text x="400" y="358" font-size="10.5" fill="#808080" text-anchor="middle">← 생각을 적게 · 많이 →</text>
+
+  <line x1="24" y1="368" x2="776" y2="368" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="384" font-size="11" fill="#808080">※ 좋은 하네스는 <tspan font-weight="700">추론을 완전히 끈 상태(none)에서도 96.7%</tspan> 로, 다른 하네스의 최고점(62.7%)을 크게 웃돕니다.</text>
+  <text x="24" y="398" font-size="11" fill="#808080">※ ARC-AGI-3 Semi-Private. 2026-09-08 에 ARC Prize 가 공개한 표에서 옮겼습니다. 비용은 위쪽이 $17K~23K, 아래쪽이 $26K~50K 입니다.</text>
+</svg>
