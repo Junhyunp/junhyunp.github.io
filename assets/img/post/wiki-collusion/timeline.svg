@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif">
+
+  <text x="24" y="26" font-size="15" font-weight="700" fill="#808080">OpenAI 등록 IP가 열람한 다음 날, 게시가 멈췄습니다</text>
+  <text x="24" y="48" font-size="12" fill="#808080">2026년 5~7월. 25년 된 독일어 위키에서 벌어진 일의 경과입니다.</text>
+
+  <rect x="580" y="178" width="24" height="24" rx="4" fill="#A66BBE" fill-opacity="0.2"/>
+  <line x1="90" y1="190" x2="720" y2="190" stroke="#808080" stroke-width="1.5" stroke-opacity="0.45"/>
+
+  <circle cx="90" cy="190" r="6" fill="#808080" fill-opacity="0.5"/>
+  <path d="M90 200 L90 228" stroke="#808080" stroke-width="1.2" stroke-opacity="0.45"/>
+  <text x="90" y="244" font-size="10.5" fill="#808080" text-anchor="middle">5/11</text>
+  <text x="90" y="258" font-size="10" fill="#808080" text-anchor="middle">활동 시작</text>
+
+  <circle cx="247" cy="190" r="7" fill="#3FB6A8"/>
+  <path d="M247 180 L247 152" stroke="#3FB6A8" stroke-width="1.2" stroke-opacity="0.6"/>
+  <text x="247" y="144" font-size="11.5" font-weight="700" fill="#3FB6A8" text-anchor="middle">5/24 — 위키를 발견</text>
+  <text x="247" y="128" font-size="10" fill="#808080" text-anchor="middle">GET 요청으로 쓰기가 되는 곳</text>
+
+  <circle cx="526" cy="190" r="7" fill="#808080" fill-opacity="0.6"/>
+  <path d="M526 200 L526 228" stroke="#808080" stroke-width="1.2" stroke-opacity="0.45"/>
+  <text x="526" y="244" font-size="10.5" fill="#808080" text-anchor="middle">6/16 — 본격화</text>
+  <text x="526" y="258" font-size="10" fill="#808080" text-anchor="middle">이레 동안 약 1만 3천 건</text>
+
+  <circle cx="586" cy="190" r="6" fill="#A66BBE"/>
+  <circle cx="598" cy="190" r="6" fill="#A66BBE"/>
+  <path d="M592 178 L592 150" stroke="#A66BBE" stroke-width="1.2" stroke-opacity="0.7"/>
+  <text x="640" y="142" font-size="11.5" font-weight="700" fill="#A66BBE" text-anchor="middle">6/21 → 6/22</text>
+  <text x="640" y="126" font-size="10" fill="#808080" text-anchor="middle">직원이 페이지를 열람한 다음 날</text>
+  <text x="640" y="112" font-size="10" fill="#808080" text-anchor="middle">게시가 멈춤</text>
+
+  <circle cx="720" cy="190" r="6" fill="#808080" fill-opacity="0.5"/>
+  <path d="M720 200 L720 228" stroke="#808080" stroke-width="1.2" stroke-opacity="0.45"/>
+  <text x="720" y="244" font-size="10.5" fill="#808080" text-anchor="middle">7/2</text>
+  <text x="720" y="258" font-size="10" fill="#808080" text-anchor="middle">활동 종료</text>
+
+  <line x1="24" y1="282" x2="776" y2="282" stroke="#808080" stroke-width="1" stroke-opacity="0.25"/>
+  <text x="24" y="300" font-size="11" fill="#808080">※ 전체 게시물은 약 <tspan font-weight="700">1만 8천 건</tspan>이고, 접속의 <tspan font-weight="700">98.5%가 마이크로소프트 애저 IP</tspan> 였습니다.</text>
+  <text x="24" y="316" font-size="11" fill="#808080">※ 6/21→6/22 의 인접함은 <tspan font-weight="700">정황이지 확인된 인과가 아닙니다.</tspan> OpenAI 는 이 건을 공개적으로 언급한 적이 없습니다.</text>
+  <text x="24" y="332" font-size="11" fill="#808080">※ 2026-09-08 에 collusion.wiki 원문에서 확인했습니다.</text>
+</svg>
