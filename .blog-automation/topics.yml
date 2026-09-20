@@ -693,3 +693,36 @@ topics:
     status: done
     published: 2026-08-29
     post: 2026-08-29-ai-engineering-skills-map.md
+
+  # ── 2026-09-20 수동 수집: Ghidra 공식 자료 ───────────────────
+  - id: 50
+    category: Tech
+    prefix: "Tool"
+    title: "소스코드 없이 프로그램을 읽는 법 — NSA의 Ghidra"
+    slug: ghidra-reverse-engineering
+    tags: [Tool, Ghidra, reverse engineering, cybersecurity, malware analysis]
+    note: >-
+      1차 출처: NSA 공식 GitHub 저장소, 공식 Getting Started 문서, Releases.
+      Ghidra는 소프트웨어 리버스 엔지니어링 프레임워크이며 디컴파일·디버거·헤드리스 분석·스크립트와 확장을 제공한다.
+      ★ 글의 축: "소스가 없을 때도 실행 파일에서 무엇을 읽을 수 있고, 무엇은 복원할 수 없는가". 도구 사용법 나열 대신
+      컴파일 과정에서 사라지는 이름·주석·의도와, 어셈블리·함수 구조·문자열·호출 관계에서 되찾는 단서를 대비한다.
+      ⚠️ "Windows/macOS/Linux에서 바로 된다"고 뭉뚱그리지 말 것. 최신 공식 설치 문서는 Windows·Linux의 사전 빌드
+      네이티브 구성요소와, macOS에서 사용자 빌드가 필요할 수 있는 경우를 구분한다. 버전별 Java·Python 요구사항도 확인 필요.
+      ⚠️ 분석 대상은 본인이 소유하거나 분석 권한이 있는 실행 파일로 한정하고, 악성코드 우회·무기화 절차는 다루지 않는다.
+    status: writing
+
+  # ── 2026-09-20 수동 수집: Andrew Ng / The Batch 원문 ────────
+  - id: 51
+    category: Concept
+    prefix: "Agent"
+    title: "에이전트에게 한 시간 맡기려면 — 앤드류 응이 말한 세 개의 루프"
+    slug: three-loops-agentic-coding
+    tags: [Agent, coding agent, loop engineering, evaluation, workflow]
+    note: >-
+      1차 출처: Andrew Ng, "Three Key Loops for Building Great Software", The Batch, 2026-06-26.
+      빠른 에이전트 코딩 루프, 개발자 피드백 루프, 실제 사용자·외부 피드백 루프를 속도가 다른 중첩 루프로 본다.
+      ★ 기존 하네스 연작(하네스 구조·자기개선)과 겹치지 않게 "에이전트가 스스로 닫을 수 있는 루프와 사람이 닫아야 하는
+      루프"에만 초점을 둔다. 코드 생성·테스트는 안쪽, 사양 수정·제품 판단은 바깥쪽이라는 실무 판단으로 끝낸다.
+      ⚠️ The Batch 원문은 견해 글이다. 시간 단축·성능 향상 수치로 일반화하지 말고, 세 루프는 설계 프레임으로 제시한다.
+      후속 근거가 필요하면 공식 도구 문서·실증 연구를 별도로 붙인다.
+    status: todo
